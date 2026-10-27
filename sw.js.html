@@ -1,0 +1,67 @@
+// Service Worker - SOBAT BK
+// Ganti CACHE_NAME setiap kali ada update besar agar cache lama otomatis dibersihkan
+const CACHE_NAME = 'sobatbk-cache-v1';
+
+// Aset inti yang di-cache agar aplikasi tetap bisa dibuka walau koneksi lambat/offline
+const CORE_ASSETS = [
+  './',
+  './index.html',
+  './style.css',
+  './script.obfuscated.js',
+  './manifest.json'
+];
+
+// INSTALL: simpan aset inti ke cache
+self.addEventListener('install', (event) => {
+  event.waitUntil(
+    caches.open(CACHE_NAME)
+      .then((cache) => cache.addAll(CORE_ASSETS))
+      .then(() => self.skipWaiting())
+  );
+});
+
+// ACTIVATE: bersihkan cache versi lama
+self.addEventListener('activate', (event) => {
+  event.waitUntil(
+    caches.keys().then((keys) =>
+      Promise.all(
+        keys
+          .filter((key) => key !== CACHE_NAME)
+          .map((key) => caches.delete(key))
+      )
+    ).then(() => self.clients.claim())
+  );
+});
+
+// FETCH: strategi network-first untuk HTML/JS (biar selalu dapat versi terbaru),
+// dan cache-first untuk aset statis lain (CSS, gambar, dll)
+self.addEventListener('fetch', (event) => {
+  const req = event.request;
+
+  // Lewati request non-GET (misal POST ke Supabase) — jangan diintersep
+  if (req.method !== 'GET') return;
+
+  // Lewati request ke domain lain (CDN, Supabase, Google Drive, dll) — biarkan langsung ke jaringan
+  const url = new URL(req.url);
+  if (url.origin !== self.location.origin) return;
+
+  const isHtmlOrJs = req.destination === 'document' || req.destination === 'script';
+
+  if (isHtmlOrJs) {
+    // Network-first
+    event.respondWith(
+      fetch(req)
+        .then((res) => {
+          const resClone = res.clone();
+          caches.open(CACHE_NAME).then((cache) => cache.put(req, resClone));
+          return res;
+        })
+        .catch(() => caches.match(req))
+    );
+  } else {
+    // Cache-first
+    event.respondWith(
+      caches.match(req).then((cached) => cached || fetch(req))
+    );
+  }
+});

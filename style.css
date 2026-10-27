@@ -1,0 +1,160 @@
+:root { --primary: #1e3a8a; --accent: #f59e0b; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #F8FAFC; scroll-behavior: smooth; overflow-x: hidden; }
+        .font-doa { font-family: 'Playfair Display', serif; }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 6px; height: 6px; }
+        ::-webkit-scrollbar-track { background: #f1f5f9; }
+        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+
+        /* Glass Effect */
+        .glass { background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border-bottom: 1px solid rgba(255,255,255,0.6); }
+        .glass-card { background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.5); box-shadow: 0 10px 40px -10px rgba(0,0,0,0.05); }
+        .glass-dark { background: rgba(15, 23, 42, 0.85); backdrop-filter: blur(16px); border: 1px solid rgba(255,255,255,0.1); }
+
+        /* SweetAlert Custom UI */
+        .swal2-popup { border-radius: 1.5rem !important; font-family: 'Plus Jakarta Sans', sans-serif; }
+        .swal2-confirm { background-color: #f59e0b !important; border-radius: 0.75rem !important; }
+        
+        .hide-scroll::-webkit-scrollbar { display: none; }
+		
+		/* Animasi Kutipan */
+		@keyframes fadeSlide {
+			0% { opacity: 0; transform: translateY(10px); }
+			100% { opacity: 1; transform: translateY(0); }
+		}
+		
+		/* Animasi Hero Star Tech */
+		@keyframes fadeSlideUp {
+			0%   { opacity: 0; transform: translateY(24px); }
+			100% { opacity: 1; transform: translateY(0); }
+		}
+
+		@keyframes scrollDot {
+			0%   { transform: translateY(0); opacity: 1; }
+			100% { transform: translateY(12px); opacity: 0; }
+		}
+		.kutipan-anim { animation: fadeSlide 0.6s ease forwards; }
+
+		/* Scroll Horizontal Testimoni */
+		.scroll-x { overflow-x: auto; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; }
+		.scroll-x::-webkit-scrollbar { display: none; }
+		.scroll-x > * { scroll-snap-align: start; }
+
+		/* Quill Editor Custom */
+		.ql-toolbar { border-radius: 0.75rem 0.75rem 0 0 !important; border-color: #e2e8f0 !important; background: #f8fafc; }
+		.ql-container { border-radius: 0 0 0.75rem 0.75rem !important; border-color: #e2e8f0 !important; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.9rem; min-height: 200px; }
+		.ql-editor { min-height: 200px; line-height: 1.8; }
+		.ql-editor p { margin-bottom: 0.5rem; }
+		
+		/* Galeri Slide */
+		.galeri-track { display: flex; transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94); will-change: transform; }
+		.galeri-slide { flex-shrink: 0; width: 100%; }
+		.galeri-wrapper { overflow: hidden; border-radius: 2rem; cursor: grab; user-select: none; }
+		.galeri-wrapper:active { cursor: grabbing; }
+
+		/* Portal Glassmorphism */
+		.glass-portal-card {
+			background: rgba(255, 255, 255, 0.05);
+			backdrop-filter: blur(20px);
+			-webkit-backdrop-filter: blur(20px);
+			border: 1px solid rgba(255, 255, 255, 0.12);
+			box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+			transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+		}
+		.glass-portal-card:hover {
+			background: rgba(255, 255, 255, 0.1);
+			border-color: rgba(245, 158, 11, 0.5);
+			box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4), 0 0 40px rgba(245, 158, 11, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+			transform: translateY(-6px);
+		}
+		.glass-portal-ikon {
+			background: rgba(255, 255, 255, 0.08);
+			border: 1px solid rgba(255, 255, 255, 0.15);
+			backdrop-filter: blur(10px);
+			transition: all 0.4s ease;
+		}
+		.glass-portal-card:hover .glass-portal-ikon {
+			background: rgba(245, 158, 11, 0.2);
+			border-color: rgba(245, 158, 11, 0.4);
+			box-shadow: 0 0 20px rgba(245, 158, 11, 0.3);
+			transform: scale(1.1);
+		}
+		/* Portal & Aplikasi — Premium Light */
+		.portal-page-wrap {
+			background: linear-gradient(135deg, #eef2ff 0%, #f0f4ff 40%, #faf5ff 70%, #eff6ff 100%);
+			min-height: 100vh;
+		}
+
+		.kartu-portal-cerah {
+			background: white;
+			border: 1.5px solid rgba(245, 158, 11, 0.25);
+			border-radius: 1.75rem;
+			box-shadow: 0 4px 24px -4px rgba(99, 102, 241, 0.08), 0 1px 4px rgba(0,0,0,0.04);
+			transition: all 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+			position: relative;
+			overflow: hidden;
+		}
+		.kartu-portal-cerah::before {
+			content: '';
+			position: absolute;
+			inset: 0;
+			background: linear-gradient(135deg, rgba(245,158,11,0.06) 0%, rgba(99,102,241,0.06) 100%);
+			opacity: 0;
+			transition: opacity 0.35s ease;
+			border-radius: inherit;
+		}
+		.kartu-portal-cerah:hover {
+			border-color: rgba(245, 158, 11, 0.7);
+			box-shadow: 0 16px 48px -8px rgba(99, 102, 241, 0.18), 0 0 0 1px rgba(245,158,11,0.3), 0 4px 12px rgba(245,158,11,0.12);
+			transform: translateY(-6px);
+		}
+		.kartu-portal-cerah:hover::before { opacity: 1; }
+
+		/* Shimmer efek saat hover */
+		.kartu-portal-cerah::after {
+			content: '';
+			position: absolute;
+			top: -50%;
+			left: -60%;
+			width: 40%;
+			height: 200%;
+			background: linear-gradient(105deg, transparent 40%, rgba(255,255,255,0.7) 50%, transparent 60%);
+			transform: skewX(-15deg);
+			opacity: 0;
+			transition: opacity 0.1s;
+		}
+		.kartu-portal-cerah:hover::after {
+			opacity: 1;
+			animation: shimmerSlide 0.6s ease forwards;
+		}
+		@keyframes shimmerSlide {
+			0%   { left: -60%; opacity: 1; }
+			100% { left: 130%; opacity: 1; }
+		}
+
+		.ikon-portal-cerah {
+			background: linear-gradient(135deg, #eef2ff, #ede9fe);
+			border: 1.5px solid rgba(99, 102, 241, 0.15);
+			transition: all 0.35s ease;
+		}
+		.kartu-portal-cerah:hover .ikon-portal-cerah {
+			background: linear-gradient(135deg, #fef3c7, #fde68a);
+			border-color: rgba(245, 158, 11, 0.4);
+			box-shadow: 0 4px 16px rgba(245,158,11,0.25);
+			transform: scale(1.1) rotate(-3deg);
+		}
+
+		.badge-portal-cerah {
+			background: linear-gradient(135deg, #eef2ff, #ede9fe);
+			border: 1px solid rgba(99, 102, 241, 0.2);
+			color: #4338ca;
+			transition: all 0.35s ease;
+		}
+		.kartu-portal-cerah:hover .badge-portal-cerah {
+			background: linear-gradient(135deg, #f59e0b, #fbbf24);
+			border-color: transparent;
+			color: #1e3a8a;
+			box-shadow: 0 4px 12px rgba(245,158,11,0.3);
+		}

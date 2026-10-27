@@ -1,0 +1,1870 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobat BK | Pro</title>
+	
+	<link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#8b5cf6">
+    <link rel="apple-touch-icon" href="https://drive.google.com/thumbnail?id=1YstR2gBLBWMOSxuPwiQR0XYEa-qjkOOl">
+	
+	<link rel="icon" type="image/jpeg" href="https://drive.google.com/thumbnail?id=1YstR2gBLBWMOSxuPwiQR0XYEa-qjkOOl">
+	<link rel="apple-touch-icon" href="https://drive.google.com/thumbnail?id=1YstR2gBLBWMOSxuPwiQR0XYEa-qjkOOl">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+	<link href="https://cdn.quilljs.com/1.3.7/quill.snow.css" rel="stylesheet">
+	<script src="https://cdn.quilljs.com/1.3.7/quill.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@1,600&display=swap" rel="stylesheet">
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/browser-image-compression@2.0.1/dist/browser-image-compression.js"></script>
+	<link rel="stylesheet" href="style.css">
+
+    
+</head>
+<body class="text-slate-800 antialiased selection:bg-blue-100 selection:text-blue-900 flex flex-col min-h-screen">
+
+    <div id="public-view" class="flex-1 flex flex-col">
+        <div class="bg-blue-900 text-white text-xs py-2 relative z-50 overflow-hidden border-b border-blue-800">
+            <div class="max-w-7xl mx-auto px-4 flex items-center gap-4">
+                <span class="bg-amber-500 text-blue-900 font-bold px-3 py-0.5 rounded-sm text-[10px] uppercase tracking-wider shrink-0 shadow-lg">Info BK</span>
+                <marquee class="font-medium tracking-wide" scrollamount="5" behavior="scroll" loop="infinite" onmouseover="this.stop=false" onmouseout="this.stop=false">Selamat Datang di Portal SOBAT BK — Melayani dengan hati, membimbing ke arah presisi. Bersama menciptakan ruang aman dan nyaman bagi seluruh siswa. &nbsp;&nbsp;✦&nbsp;&nbsp; Mappaguru Online &mdash; <span class="text-amber-300 font-bold">Muhammad Hasratul</span> &nbsp;&nbsp;✦&nbsp;&nbsp; MADRASAH ALIYAH NEGERI 4 BONE &nbsp;&nbsp;✦&nbsp;&nbsp; Melayani dengan Hati, Membimbing ke Arah Presisi.</marquee>
+            </div>
+        </div>
+
+        <nav class="sticky top-0 z-40 glass px-4 py-3 shadow-sm transition-all duration-300">
+            <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+                <div class="flex items-center gap-3 w-full md:w-auto justify-between">
+                    <div class="flex items-center gap-3">
+						<div class="w-11 h-11 rounded-xl overflow-hidden shadow-lg shrink-0 border-2 border-amber-400">
+							<img src="https://drive.google.com/thumbnail?id=1YstR2gBLBWMOSxuPwiQR0XYEa-qjkOOl" 
+								class="w-full h-full object-cover"
+								onerror="this.style.display='none'">
+						</div>
+						<div>
+							<p class="text-[8px] font-bold text-slate-500 uppercase tracking-widest leading-none mb-0.5">MADRASAH ALIYAH NEGERI 4 BONE</p>
+							<h1 class="font-extrabold text-blue-900 text-sm leading-none tracking-tight">SOBAT BK</h1>
+							<p class="text-[9px] font-bold text-amber-600 uppercase tracking-tight leading-none mt-0.5">Sistem Online Layanan BK & Administrasi Terpadu</p>
+						</div>
+					</div>
+                </div>
+
+                <div class="w-full md:w-auto overflow-x-auto hide-scroll pb-1 md:pb-0">
+                    <div class="flex space-x-1 min-w-max p-1 bg-slate-100/80 backdrop-blur-sm rounded-full md:bg-transparent overflow-x-auto hide-scroll">
+                        <button onclick="navigasiPublic('page-beranda', this)" class="nav-btn-public px-4 py-2 text-xs md:text-sm font-bold text-white bg-gradient-to-r from-blue-900 to-blue-600 rounded-full shadow-md transition">Beranda</button>
+                        <button onclick="navigasiPublic('page-pengumuman', this)" class="nav-btn-public px-4 py-2 text-xs md:text-sm font-bold text-slate-500 hover:text-blue-900 transition rounded-full">Pengumuman</button>
+						<button onclick="navigasiPublic('page-portal', this)" class="nav-btn-public px-4 py-2 text-xs md:text-sm font-bold text-slate-500 hover:text-blue-900 transition rounded-full">Portal</button>
+						<button onclick="navigasiPublic('page-video', this)" class="nav-btn-public px-4 py-2 text-xs md:text-sm font-bold text-slate-500 hover:text-blue-900 transition rounded-full">Video</button>
+						<button onclick="navigasiPublic('page-berita', this)" class="nav-btn-public px-4 py-2 text-xs md:text-sm font-bold text-slate-500 hover:text-blue-900 transition rounded-full">Berita</button>
+                        <button onclick="navigasiPublic('page-karya', this)" class="nav-btn-public px-4 py-2 text-xs md:text-sm font-bold text-slate-500 hover:text-blue-900 transition rounded-full">Karya</button>
+                        <button onclick="navigasiPublic('page-galeri', this)" class="nav-btn-public px-4 py-2 text-xs md:text-sm font-bold text-slate-500 hover:text-blue-900 transition rounded-full">Galeri</button>
+                        <button onclick="navigasiPublic('page-qna', this)" class="nav-btn-public px-4 py-2 text-xs md:text-sm font-bold text-slate-500 hover:text-blue-900 transition rounded-full">QnA</button>
+                        <button onclick="navigasiPublic('page-testimoni', this)" class="nav-btn-public px-4 py-2 text-xs md:text-sm font-bold text-slate-500 hover:text-blue-900 transition rounded-full">Testimoni</button>
+                        
+                        <button onclick="refreshPublicData()" title="Refresh Data" class="shrink-0 w-9 h-9 flex items-center justify-center bg-slate-100 hover:bg-blue-100 text-slate-500 hover:text-blue-700 rounded-full transition" id="btn-refresh">
+							<i class="ph-bold ph-arrows-clockwise text-base" id="icon-refresh"></i>
+						</button>
+						<button onclick="showLoginModal()" class="ml-1 shrink-0 flex items-center gap-2 bg-amber-500 text-blue-900 px-5 py-2 rounded-full text-xs font-bold hover:shadow-lg transition">
+							<i class="ph-bold ph-sign-in"></i> Ruang Guru BK
+						</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <main class="flex-1 w-full bg-slate-50 relative pb-16">
+            
+            <div id="page-beranda" class="public-page block">
+
+				<!-- HERO -->
+				<header class="relative overflow-hidden bg-[#020917] text-center" style="min-height: 100svh; display: flex; flex-direction: column; justify-content: center;">
+
+					<!-- LAYER 1: Grid Lines Blueprint -->
+					<div class="absolute inset-0 pointer-events-none" style="
+						background-image: 
+							linear-gradient(rgba(59,130,246,0.07) 1px, transparent 1px),
+							linear-gradient(90deg, rgba(59,130,246,0.07) 1px, transparent 1px);
+						background-size: 40px 40px;
+					"></div>
+
+					<!-- LAYER 2: Gradient Mesh Glow -->
+					<div class="absolute inset-0 pointer-events-none overflow-hidden">
+						<!-- Glow kiri bawah -->
+						<div class="absolute rounded-full pointer-events-none" style="
+							width: 600px; height: 600px;
+							background: radial-gradient(circle, rgba(30,58,138,0.5) 0%, transparent 70%);
+							bottom: -200px; left: -150px;
+							filter: blur(40px);
+						"></div>
+						<!-- Glow kanan atas -->
+						<div class="absolute rounded-full pointer-events-none" style="
+							width: 500px; height: 500px;
+							background: radial-gradient(circle, rgba(59,130,246,0.25) 0%, transparent 70%);
+							top: -100px; right: -100px;
+							filter: blur(50px);
+						"></div>
+						<!-- Glow tengah amber -->
+						<div class="absolute rounded-full pointer-events-none" style="
+							width: 400px; height: 400px;
+							background: radial-gradient(circle, rgba(245,158,11,0.08) 0%, transparent 70%);
+							top: 50%; left: 50%;
+							transform: translate(-50%, -50%);
+							filter: blur(60px);
+						"></div>
+						<!-- Glow biru cyan kecil -->
+						<div class="absolute rounded-full pointer-events-none" style="
+							width: 200px; height: 200px;
+							background: radial-gradient(circle, rgba(14,165,233,0.15) 0%, transparent 70%);
+							top: 30%; right: 20%;
+							filter: blur(30px);
+						"></div>
+					</div>
+
+					<!-- LAYER 3: Noise Texture -->
+					<div class="absolute inset-0 opacity-[0.03] pointer-events-none" style="
+						background-image: url('https://www.transparenttextures.com/patterns/asfalt-dark.png');
+					"></div>
+
+					<!-- KONTEN UTAMA -->
+					<div class="relative z-10 max-w-5xl mx-auto px-4 py-20 md:py-28 flex flex-col items-center">
+
+						<!-- Logo + Badge Institusi -->
+						<div class="flex flex-col items-center gap-4 mb-8" style="animation: fadeSlideUp 0.6s ease forwards; opacity: 0;">
+							<!-- Logo dengan ring glow -->
+							<div class="relative">
+								<div class="absolute inset-0 rounded-2xl animate-pulse" style="
+									background: radial-gradient(circle, rgba(245,158,11,0.4) 0%, transparent 70%);
+									filter: blur(12px);
+									transform: scale(1.3);
+								"></div>
+								<div class="relative w-16 h-16 md:w-20 md:h-20 rounded-2xl overflow-hidden border-2 shadow-2xl" style="border-color: rgba(245,158,11,0.6);">
+									<img src="https://drive.google.com/thumbnail?id=1LncsDKKl1FhXnIOujpyUJFLV7xqx0hB2"
+										class="w-full h-full object-cover"
+										onerror="this.style.display='none'">
+								</div>
+							</div>
+
+							<!-- Badge institusi -->
+							<div class="flex items-center gap-2 px-5 py-2 rounded-full border text-xs font-bold tracking-widest uppercase" style="
+								background: rgba(255,255,255,0.05);
+								backdrop-filter: blur(16px);
+								border-color: rgba(255,255,255,0.15);
+								color: rgba(255,255,255,0.8);
+							">
+								<span class="w-2 h-2 rounded-full bg-green-400 animate-pulse shadow-lg" style="box-shadow: 0 0 8px #4ade80;"></span>
+								MADRASAH ALIYAH NEGERI 4 BONE
+							</div>
+						</div>
+
+						<!-- Judul Utama -->
+						<div class="mb-3" style="animation: fadeSlideUp 0.7s ease 0.1s forwards; opacity: 0;">
+							<h2 class="font-extrabold leading-none tracking-tight" style="
+								font-size: clamp(3rem, 12vw, 6rem);
+								background: linear-gradient(135deg, #ffffff 0%, #bfdbfe 40%, #93c5fd 70%, #ffffff 100%);
+								-webkit-background-clip: text;
+								-webkit-text-fill-color: transparent;
+								background-clip: text;
+								filter: drop-shadow(0 0 40px rgba(59,130,246,0.4));
+							">SOBAT BK</h2>
+						</div>
+
+						<!-- Subtitle -->
+						<div class="mb-4" style="animation: fadeSlideUp 0.7s ease 0.15s forwards; opacity: 0;">
+							<p class="text-xs md:text-sm font-extrabold uppercase tracking-[0.25em]" style="color: #f59e0b;">
+								Sistem Online Layanan BK & Administrasi Terpadu
+							</p>
+						</div>
+
+						<!-- Deskripsi -->
+						<div class="mb-12 max-w-2xl" style="animation: fadeSlideUp 0.7s ease 0.2s forwards; opacity: 0;">
+							<p class="text-sm md:text-base leading-relaxed font-light" style="color: rgba(191,219,254,0.8);">
+								Pusat layanan informasi BK, konsultasi online, laporan, asesmen dan manajemen administrasi BK terpadu.
+							</p>
+						</div>
+
+						<!-- KARTU CTA MEWAH -->
+						<div class="w-full grid grid-cols-1 md:grid-cols-2 gap-4 max-w-2xl" style="animation: fadeSlideUp 0.7s ease 0.25s forwards; opacity: 0;">
+
+							<!-- KARTU 1: PORTAL -->
+							<button onclick="navigasiPublic('page-portal', document.querySelectorAll('.nav-btn-public')[2])"
+								class="group relative overflow-hidden text-left rounded-2xl p-5 md:p-6 transition-all duration-500 hover:-translate-y-1"
+								style="
+									background: rgba(255,255,255,0.04);
+									backdrop-filter: blur(20px);
+									border: 1px solid rgba(59,130,246,0.3);
+									box-shadow: 0 8px 32px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.08);
+								">
+
+								<!-- Hover glow background -->
+								<div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none rounded-2xl" style="
+									background: linear-gradient(135deg, rgba(30,58,138,0.4) 0%, rgba(59,130,246,0.15) 100%);
+								"></div>
+
+								<!-- Border gradient animasi -->
+								<div class="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" style="
+									background: linear-gradient(135deg, rgba(59,130,246,0.5), rgba(245,158,11,0.3)) border-box;
+									-webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+									-webkit-mask-composite: destination-out;
+									mask-composite: exclude;
+									border: 1px solid transparent;
+								"></div>
+
+								<div class="relative z-10 flex items-start gap-4">
+									<!-- Ikon -->
+									<div class="shrink-0 w-12 h-12 md:w-14 md:h-14 rounded-2xl flex items-center justify-center transition-all duration-500 group-hover:scale-110" style="
+										background: linear-gradient(135deg, rgba(30,58,138,0.8), rgba(59,130,246,0.6));
+										border: 1px solid rgba(59,130,246,0.5);
+										box-shadow: 0 0 20px rgba(59,130,246,0.3);
+									">
+										<i class="ph-fill ph-globe-hemisphere-west text-2xl md:text-3xl" style="color: #93c5fd;"></i>
+									</div>
+
+									<div class="flex-1 min-w-0">
+										<!-- Label kecil -->
+										<p class="text-[9px] font-extrabold uppercase tracking-[0.2em] mb-1" style="color: rgba(147,197,253,0.7);">Layanan Terpadu</p>
+										<!-- Judul kartu -->
+										<h3 class="font-extrabold text-white text-base md:text-lg leading-tight mb-1.5 group-hover:text-blue-200 transition-colors">
+											Akses Portal
+										</h3>
+										<!-- Deskripsi -->
+										<p class="text-xs leading-relaxed mb-4" style="color: rgba(191,219,254,0.6);">
+											Pintasan layanan BK, aplikasi, dan sistem terpadu dalam satu portal.
+										</p>
+										<!-- Tombol kecil -->
+										<div class="flex items-center gap-2 text-xs font-extrabold transition-all duration-300 group-hover:gap-3" style="color: #60a5fa;">
+											<span>Buka Sekarang</span>
+											<i class="ph-bold ph-arrow-right text-sm transition-transform duration-300 group-hover:translate-x-1"></i>
+										</div>
+									</div>
+								</div>
+
+								<!-- Dekorasi sudut -->
+								<div class="absolute top-3 right-3 w-1.5 h-1.5 rounded-full opacity-60 group-hover:opacity-100 group-hover:scale-150 transition-all duration-300" style="background: #3b82f6;"></div>
+								<div class="absolute bottom-3 right-5 w-1 h-1 rounded-full opacity-30" style="background: #f59e0b;"></div>
+
+								<!-- Garis bawah animasi -->
+								<div class="absolute bottom-0 left-0 h-[2px] w-0 group-hover:w-full transition-all duration-500 rounded-b-2xl" style="background: linear-gradient(90deg, #3b82f6, #f59e0b, #3b82f6);"></div>
+							</button>
+
+							<!-- KARTU 2: LAYANAN BK -->
+							<button onclick="navigasiPublic('page-layanan', null)"
+								class="group relative overflow-hidden text-left rounded-2xl p-5 md:p-6 transition-all duration-500 hover:-translate-y-1"
+								style="
+									background: rgba(255,255,255,0.04);
+									backdrop-filter: blur(20px);
+									border: 1px solid rgba(245,158,11,0.3);
+									box-shadow: 0 8px 32px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.08);
+								">
+
+								<!-- Hover glow background -->
+								<div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none rounded-2xl" style="
+									background: linear-gradient(135deg, rgba(120,53,15,0.3) 0%, rgba(245,158,11,0.1) 100%);
+								"></div>
+
+								<div class="relative z-10 flex items-start gap-4">
+									<!-- Ikon -->
+									<div class="shrink-0 w-12 h-12 md:w-14 md:h-14 rounded-2xl flex items-center justify-center transition-all duration-500 group-hover:scale-110" style="
+										background: linear-gradient(135deg, rgba(120,53,15,0.8), rgba(245,158,11,0.5));
+										border: 1px solid rgba(245,158,11,0.5);
+										box-shadow: 0 0 20px rgba(245,158,11,0.25);
+									">
+										<i class="ph-fill ph-hand-heart text-2xl md:text-3xl" style="color: #fcd34d;"></i>
+									</div>
+
+									<div class="flex-1 min-w-0">
+										<!-- Label kecil -->
+										<p class="text-[9px] font-extrabold uppercase tracking-[0.2em] mb-1" style="color: rgba(253,211,77,0.7);">Bimbingan & Konseling</p>
+										<!-- Judul kartu -->
+										<h3 class="font-extrabold text-white text-base md:text-lg leading-tight mb-1.5 group-hover:text-amber-200 transition-colors">
+											Layanan BK
+										</h3>
+										<!-- Deskripsi -->
+										<p class="text-xs leading-relaxed mb-4" style="color: rgba(253,211,77,0.5);">
+											Konsultasi, laporan, booking jadwal, saran, dan izin online.
+										</p>
+										<!-- Tombol kecil -->
+										<div class="flex items-center gap-2 text-xs font-extrabold transition-all duration-300 group-hover:gap-3" style="color: #f59e0b;">
+											<span>Mulai Sekarang</span>
+											<i class="ph-bold ph-arrow-right text-sm transition-transform duration-300 group-hover:translate-x-1"></i>
+										</div>
+									</div>
+								</div>
+
+								<!-- Dekorasi sudut -->
+								<div class="absolute top-3 right-3 w-1.5 h-1.5 rounded-full opacity-60 group-hover:opacity-100 group-hover:scale-150 transition-all duration-300" style="background: #f59e0b;"></div>
+								<div class="absolute bottom-3 right-5 w-1 h-1 rounded-full opacity-30" style="background: #3b82f6;"></div>
+
+								<!-- Garis bawah animasi -->
+								<div class="absolute bottom-0 left-0 h-[2px] w-0 group-hover:w-full transition-all duration-500 rounded-b-2xl" style="background: linear-gradient(90deg, #f59e0b, #3b82f6, #f59e0b);"></div>
+							</button>
+
+						</div>
+
+						<!-- Scroll indicator -->
+						<div class="mt-12 flex flex-col items-center gap-2" style="animation: fadeSlideUp 0.7s ease 0.35s forwards; opacity: 0;">
+							<p class="text-[10px] font-bold uppercase tracking-widest" style="color: rgba(255,255,255,0.2);">Gulir ke Bawah</p>
+							<div class="w-5 h-8 rounded-full border flex items-start justify-center p-1" style="border-color: rgba(255,255,255,0.15);">
+								<div class="w-1 h-2 rounded-full" style="background: rgba(255,255,255,0.4); animation: scrollDot 1.5s ease infinite;"></div>
+							</div>
+						</div>
+
+					</div>
+				</header>
+
+				<!-- STATISTIK -->
+				<section class="max-w-5xl mx-auto px-4 -mt-10 relative z-10 mb-16">
+					<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+
+						<!-- BERITA -->
+						<div class="group relative overflow-hidden rounded-[1.75rem] p-5 md:p-6 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl"
+							style="
+								background: linear-gradient(135deg, #f0f7ff 0%, #e8f0fe 100%);
+								border: 1px solid rgba(59,130,246,0.2);
+								box-shadow: 0 8px 32px rgba(59,130,246,0.1);
+							">
+							<!-- Ambient glow -->
+							<div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none rounded-[1.75rem]"
+								style="background: radial-gradient(circle at 50% 0%, rgba(59,130,246,0.12) 0%, transparent 70%);"></div>
+
+							<!-- Dekorasi lingkaran besar -->
+							<div class="absolute -top-6 -right-6 w-24 h-24 rounded-full opacity-10 group-hover:opacity-20 transition-opacity duration-500"
+								style="background: #3b82f6;"></div>
+
+							<!-- Ikon -->
+							<div class="relative z-10 mb-4">
+								<div class="w-12 h-12 md:w-14 md:h-14 rounded-2xl flex items-center justify-center transition-all duration-500 group-hover:scale-110"
+									style="
+										background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+										box-shadow: 0 8px 24px rgba(59,130,246,0.4), 0 0 0 4px rgba(59,130,246,0.1);
+									">
+									<i class="ph-fill ph-newspaper text-white text-2xl md:text-3xl"></i>
+								</div>
+							</div>
+
+							<!-- Angka -->
+							<div class="relative z-10">
+								<p id="stat-berita" class="font-extrabold leading-none mb-1"
+									style="
+										font-size: clamp(1.75rem, 5vw, 2.5rem);
+										background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+										-webkit-background-clip: text;
+										-webkit-text-fill-color: transparent;
+										background-clip: text;
+									">0</p>
+								<p class="text-[10px] font-extrabold uppercase tracking-[0.2em]"
+									style="color: #3b82f6;">Berita</p>
+							</div>
+
+							<!-- Garis bawah animasi -->
+							<div class="absolute bottom-0 left-0 h-[3px] w-0 group-hover:w-full transition-all duration-500 rounded-b-[1.75rem]"
+								style="background: linear-gradient(90deg, #1e3a8a, #3b82f6);"></div>
+						</div>
+
+						<!-- VIDEO -->
+						<div class="group relative overflow-hidden rounded-[1.75rem] p-5 md:p-6 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl"
+							style="
+								background: linear-gradient(135deg, #fff5f5 0%, #fee2e2 100%);
+								border: 1px solid rgba(239,68,68,0.2);
+								box-shadow: 0 8px 32px rgba(239,68,68,0.1);
+							">
+							<!-- Ambient glow -->
+							<div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none rounded-[1.75rem]"
+								style="background: radial-gradient(circle at 50% 0%, rgba(239,68,68,0.1) 0%, transparent 70%);"></div>
+
+							<!-- Dekorasi lingkaran besar -->
+							<div class="absolute -top-6 -right-6 w-24 h-24 rounded-full opacity-10 group-hover:opacity-20 transition-opacity duration-500"
+								style="background: #ef4444;"></div>
+
+							<!-- Ikon -->
+							<div class="relative z-10 mb-4">
+								<div class="w-12 h-12 md:w-14 md:h-14 rounded-2xl flex items-center justify-center transition-all duration-500 group-hover:scale-110"
+									style="
+										background: linear-gradient(135deg, #991b1b, #ef4444);
+										box-shadow: 0 8px 24px rgba(239,68,68,0.4), 0 0 0 4px rgba(239,68,68,0.1);
+									">
+									<i class="ph-fill ph-youtube-logo text-white text-2xl md:text-3xl"></i>
+								</div>
+							</div>
+
+							<!-- Angka -->
+							<div class="relative z-10">
+								<p id="stat-video" class="font-extrabold leading-none mb-1"
+									style="
+										font-size: clamp(1.75rem, 5vw, 2.5rem);
+										background: linear-gradient(135deg, #991b1b, #ef4444);
+										-webkit-background-clip: text;
+										-webkit-text-fill-color: transparent;
+										background-clip: text;
+									">0</p>
+								<p class="text-[10px] font-extrabold uppercase tracking-[0.2em]"
+									style="color: #ef4444;">Video</p>
+							</div>
+
+							<!-- Garis bawah animasi -->
+							<div class="absolute bottom-0 left-0 h-[3px] w-0 group-hover:w-full transition-all duration-500 rounded-b-[1.75rem]"
+								style="background: linear-gradient(90deg, #991b1b, #ef4444);"></div>
+						</div>
+
+						<!-- KARYA -->
+						<div class="group relative overflow-hidden rounded-[1.75rem] p-5 md:p-6 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl"
+							style="
+								background: linear-gradient(135deg, #faf5ff 0%, #ede9fe 100%);
+								border: 1px solid rgba(139,92,246,0.2);
+								box-shadow: 0 8px 32px rgba(139,92,246,0.1);
+							">
+							<!-- Ambient glow -->
+							<div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none rounded-[1.75rem]"
+								style="background: radial-gradient(circle at 50% 0%, rgba(139,92,246,0.1) 0%, transparent 70%);"></div>
+
+							<!-- Dekorasi lingkaran besar -->
+							<div class="absolute -top-6 -right-6 w-24 h-24 rounded-full opacity-10 group-hover:opacity-20 transition-opacity duration-500"
+								style="background: #8b5cf6;"></div>
+
+							<!-- Ikon -->
+							<div class="relative z-10 mb-4">
+								<div class="w-12 h-12 md:w-14 md:h-14 rounded-2xl flex items-center justify-center transition-all duration-500 group-hover:scale-110"
+									style="
+										background: linear-gradient(135deg, #5b21b6, #8b5cf6);
+										box-shadow: 0 8px 24px rgba(139,92,246,0.4), 0 0 0 4px rgba(139,92,246,0.1);
+									">
+									<i class="ph-fill ph-palette text-white text-2xl md:text-3xl"></i>
+								</div>
+							</div>
+
+							<!-- Angka -->
+							<div class="relative z-10">
+								<p id="stat-karya" class="font-extrabold leading-none mb-1"
+									style="
+										font-size: clamp(1.75rem, 5vw, 2.5rem);
+										background: linear-gradient(135deg, #5b21b6, #8b5cf6);
+										-webkit-background-clip: text;
+										-webkit-text-fill-color: transparent;
+										background-clip: text;
+									">0</p>
+								<p class="text-[10px] font-extrabold uppercase tracking-[0.2em]"
+									style="color: #8b5cf6;">Karya Siswa</p>
+							</div>
+
+							<!-- Garis bawah animasi -->
+							<div class="absolute bottom-0 left-0 h-[3px] w-0 group-hover:w-full transition-all duration-500 rounded-b-[1.75rem]"
+								style="background: linear-gradient(90deg, #5b21b6, #8b5cf6);"></div>
+						</div>
+
+						<!-- LAYANAN -->
+						<div class="group relative overflow-hidden rounded-[1.75rem] p-5 md:p-6 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl"
+							style="
+								background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
+								border: 1px solid rgba(245,158,11,0.2);
+								box-shadow: 0 8px 32px rgba(245,158,11,0.1);
+							">
+							<!-- Ambient glow -->
+							<div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none rounded-[1.75rem]"
+								style="background: radial-gradient(circle at 50% 0%, rgba(245,158,11,0.12) 0%, transparent 70%);"></div>
+
+							<!-- Dekorasi lingkaran besar -->
+							<div class="absolute -top-6 -right-6 w-24 h-24 rounded-full opacity-10 group-hover:opacity-20 transition-opacity duration-500"
+								style="background: #f59e0b;"></div>
+
+							<!-- Ikon -->
+							<div class="relative z-10 mb-4">
+								<div class="w-12 h-12 md:w-14 md:h-14 rounded-2xl flex items-center justify-center transition-all duration-500 group-hover:scale-110"
+									style="
+										background: linear-gradient(135deg, #92400e, #f59e0b);
+										box-shadow: 0 8px 24px rgba(245,158,11,0.4), 0 0 0 4px rgba(245,158,11,0.1);
+									">
+									<i class="ph-fill ph-globe-hemisphere-west text-white text-2xl md:text-3xl"></i>
+								</div>
+							</div>
+
+							<!-- Angka -->
+							<div class="relative z-10">
+								<p id="stat-portal" class="font-extrabold leading-none mb-1"
+									style="
+										font-size: clamp(1.75rem, 5vw, 2.5rem);
+										background: linear-gradient(135deg, #92400e, #f59e0b);
+										-webkit-background-clip: text;
+										-webkit-text-fill-color: transparent;
+										background-clip: text;
+									">0</p>
+								<p class="text-[10px] font-extrabold uppercase tracking-[0.2em]"
+									style="color: #f59e0b;">Layanan</p>
+							</div>
+
+							<!-- Garis bawah animasi -->
+							<div class="absolute bottom-0 left-0 h-[3px] w-0 group-hover:w-full transition-all duration-500 rounded-b-[1.75rem]"
+								style="background: linear-gradient(90deg, #92400e, #f59e0b);"></div>
+						</div>
+
+					</div>
+				</section>
+
+				<!-- BERITA TERBARU -->
+				<section class="max-w-7xl mx-auto px-4 mb-20">
+					<div class="flex items-end justify-between mb-8">
+						<div>
+							<p class="text-[11px] font-bold text-amber-500 uppercase tracking-widest mb-1">Terkini</p>
+							<h3 class="text-2xl md:text-3xl font-extrabold text-slate-900">Kabar & Informasi</h3>
+						</div>
+						<button onclick="navigasiPublic('page-berita', document.querySelectorAll('.nav-btn-public')[3])"
+							class="text-xs font-bold text-blue-600 hover:text-blue-800 flex items-center gap-1 transition shrink-0">
+							Lihat Semua <i class="ph-bold ph-arrow-right"></i>
+						</button>
+					</div>
+					<div id="beranda-berita" class="grid grid-cols-1 md:grid-cols-3 gap-6"></div>
+				</section>
+
+				<!-- LAYANAN PORTAL -->
+				<section class="relative py-24 px-4 mb-0 overflow-hidden" style="background: linear-gradient(135deg, #020917 0%, #0a1628 40%, #0f2044 70%, #0a1628 100%);">
+					<div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-10"></div>
+					<!-- Ambient glow blobs -->
+					<div class="absolute top-20 left-1/4 w-96 h-96 rounded-full pointer-events-none" style="background: radial-gradient(circle, rgba(245,158,11,0.08) 0%, transparent 70%);"></div>
+					<div class="absolute bottom-10 right-1/4 w-80 h-80 rounded-full pointer-events-none" style="background: radial-gradient(circle, rgba(59,130,246,0.1) 0%, transparent 70%);"></div>
+					<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full pointer-events-none" style="background: radial-gradient(circle, rgba(30,58,138,0.15) 0%, transparent 60%);"></div>
+
+					<div class="max-w-7xl mx-auto relative z-10">
+						<!-- Header -->
+						<div class="flex items-end justify-between mb-12">
+							<div>
+								<div class="flex items-center gap-2 mb-3">
+									<div class="w-8 h-px bg-amber-500"></div>
+									<p class="text-[11px] font-bold text-amber-400 uppercase tracking-[0.2em]">Layanan Kami</p>
+								</div>
+								<h3 class="text-3xl md:text-4xl font-extrabold text-white leading-tight">
+									Portal <span style="background: linear-gradient(90deg, #f59e0b, #fcd34d); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Unggulan</span>
+								</h3>
+								<p class="text-slate-400 text-sm mt-2 font-light">Akses layanan terpadu Bimbingan & Konseling</p>
+							</div>
+							<button onclick="navigasiPublic('page-portal', document.querySelectorAll('.nav-btn-public')[1])"
+								class="group shrink-0 flex items-center gap-2 text-xs font-bold text-amber-400 hover:text-amber-300 transition border border-amber-500/30 hover:border-amber-400/60 px-5 py-2.5 rounded-full"
+								style="background: rgba(245,158,11,0.08);">
+								Semua Layanan <i class="ph-bold ph-arrow-right group-hover:translate-x-1 transition-transform"></i>
+							</button>
+						</div>
+
+						<!-- Grid Kartu -->
+						<div id="beranda-portal" class="grid grid-cols-1 md:grid-cols-3 gap-5"></div>
+
+						<!-- Dekorasi bawah -->
+						<div class="flex items-center justify-center gap-3 mt-14">
+							<div class="h-px w-16 bg-gradient-to-r from-transparent to-amber-500/40"></div>
+							<div class="w-1.5 h-1.5 rounded-full bg-amber-500/60"></div>
+							<div class="h-px w-32 bg-amber-500/20"></div>
+							<div class="w-1 h-1 rounded-full bg-slate-600"></div>
+							<div class="h-px w-32 bg-amber-500/20"></div>
+							<div class="w-1.5 h-1.5 rounded-full bg-amber-500/60"></div>
+							<div class="h-px w-16 bg-gradient-to-l from-transparent to-amber-500/40"></div>
+						</div>
+					</div>
+				</section>
+				
+				<!-- GALERI AUTO-SLIDE -->
+				<section class="py-20 px-4 bg-white">
+					<div class="max-w-7xl mx-auto">
+						<div class="flex items-end justify-between mb-8">
+							<div>
+								<p class="text-[11px] font-bold text-pink-500 uppercase tracking-widest mb-1">Dokumentasi</p>
+								<h3 class="text-2xl md:text-3xl font-extrabold text-slate-900">Galeri Kegiatan</h3>
+							</div>
+							<button onclick="navigasiPublic('page-galeri', document.querySelectorAll('.nav-btn-public')[5])"
+								class="text-xs font-bold text-blue-600 hover:text-blue-800 flex items-center gap-1 transition shrink-0">
+								Lihat Semua <i class="ph-bold ph-arrow-right"></i>
+							</button>
+						</div>
+
+						<div id="beranda-galeri-wrap" class="relative">
+							<div class="galeri-wrapper" id="galeri-slide-outer">
+								<div class="galeri-track" id="galeri-track">
+									<!-- Diisi oleh JS -->
+								</div>
+							</div>
+							<!-- Dots -->
+							<div class="flex justify-center gap-2 mt-5" id="galeri-dots"></div>
+						</div>
+					</div>
+				</section>
+
+				<!-- 3 VIDEO TERBARU -->
+				<section class="py-20 px-4 bg-slate-50">
+					<div class="max-w-7xl mx-auto">
+						<div class="flex items-end justify-between mb-8">
+							<div>
+								<p class="text-[11px] font-bold text-red-500 uppercase tracking-widest mb-1">Tonton Sekarang</p>
+								<h3 class="text-2xl md:text-3xl font-extrabold text-slate-900">Video Terbaru</h3>
+							</div>
+							<button onclick="navigasiPublic('page-video', document.querySelectorAll('.nav-btn-public')[2])"
+								class="text-xs font-bold text-blue-600 hover:text-blue-800 flex items-center gap-1 transition shrink-0">
+								Lihat Semua <i class="ph-bold ph-arrow-right"></i>
+							</button>
+						</div>
+						<div id="beranda-video" class="grid grid-cols-1 md:grid-cols-3 gap-6"></div>
+					</div>
+				</section>
+
+				<!-- KUTIPAN MOTIVASI -->
+				<section class="bg-gradient-to-r from-amber-500 to-amber-400 py-14 px-4 text-center">
+					<div class="max-w-3xl mx-auto">
+						<i class="ph-fill ph-quotes text-amber-200/60 text-5xl mb-4 block"></i>
+						<p id="kutipan-teks" class="font-doa text-xl md:text-3xl text-blue-900 leading-relaxed font-semibold italic kutipan-anim"></p>
+						<div class="flex justify-center gap-2 mt-8" id="kutipan-dots"></div>
+					</div>
+				</section>
+
+				<!-- TESTIMONI KILAT -->
+				<section class="py-16 px-4 bg-slate-50">
+					<div class="max-w-7xl mx-auto">
+						<div class="flex items-end justify-between mb-8">
+							<div>
+								<p class="text-[11px] font-bold text-amber-500 uppercase tracking-widest mb-1">Suara Mereka</p>
+								<h3 class="text-2xl md:text-3xl font-extrabold text-slate-900">Testimoni Terbaru</h3>
+							</div>
+							<button onclick="navigasiPublic('page-testimoni', document.querySelectorAll('.nav-btn-public')[7])"
+								class="text-xs font-bold text-blue-600 hover:text-blue-800 flex items-center gap-1 transition shrink-0">
+								Lihat Semua <i class="ph-bold ph-arrow-right"></i>
+							</button>
+						</div>
+						<div id="beranda-testimoni" class="scroll-x flex gap-5 pb-4"></div>
+						<p class="text-center text-[10px] text-slate-300 font-bold uppercase tracking-widest mt-4 flex items-center justify-center gap-2">
+							<i class="ph-bold ph-arrow-left"></i> geser untuk melihat lebih banyak <i class="ph-bold ph-arrow-right"></i>
+						</p>
+					</div>
+				</section>
+
+				<!-- CTA KONSELING -->
+				<section class="bg-gradient-to-br from-blue-950 to-blue-900 py-20 px-4 text-center">
+					<div class="max-w-2xl mx-auto">
+						<div class="w-16 h-16 bg-amber-500/20 rounded-[1.5rem] flex items-center justify-center mx-auto mb-6">
+							<i class="ph-fill ph-chats-circle text-amber-400 text-3xl"></i>
+						</div>
+						<h3 class="text-2xl md:text-4xl font-extrabold text-white mb-4 leading-tight">
+							Butuh Bantuan atau<br>Ingin Berbagi Cerita?
+						</h3>
+						<p class="text-blue-200/80 text-sm md:text-base leading-relaxed mb-8 font-light">
+							Ruang BK kami selalu terbuka. Konsultasi karir, masalah pribadi, atau aduan perundungan — kami siap mendengar dan membantu.
+						</p>
+						<button onclick="navigasiPublic('page-layanan', null)"
+							class="bg-amber-500 text-blue-900 font-extrabold px-10 py-4 rounded-full shadow-xl shadow-amber-500/30 hover:shadow-amber-500/50 hover:-translate-y-1 transition inline-flex items-center gap-2 text-sm">
+							<i class="ph-bold ph-hand-heart"></i> Mulai Konsultasi Sekarang
+						</button>
+					</div>
+				</section>
+
+			</div>
+			
+			<div id="page-layanan" class="public-page hidden min-h-screen bg-gradient-to-br from-blue-950 via-blue-900 to-blue-800">
+
+				<!-- SUB HALAMAN 1: LANDING -->
+				<div id="layanan-landing" class="layanan-sub">
+					<div class="relative min-h-screen flex flex-col items-center justify-center px-4 py-20 overflow-hidden">
+						<!-- Background dekorasi -->
+						<div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-10"></div>
+						<div class="absolute top-20 left-1/4 w-96 h-96 rounded-full pointer-events-none" style="background: radial-gradient(circle, rgba(245,158,11,0.08) 0%, transparent 70%);"></div>
+						<div class="absolute bottom-10 right-1/4 w-80 h-80 rounded-full pointer-events-none" style="background: radial-gradient(circle, rgba(59,130,246,0.1) 0%, transparent 70%);"></div>
+
+						<div class="relative z-10 max-w-4xl mx-auto text-center">
+							<!-- Badge -->
+							<span class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 px-5 py-2 rounded-full text-[11px] font-bold tracking-widest uppercase mb-6 text-white shadow-sm">
+								<span class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span> Layanan Bimbingan & Konseling
+							</span>
+
+							<!-- Judul -->
+							<h2 class="text-4xl md:text-6xl font-extrabold text-white mb-4 leading-tight tracking-tight drop-shadow-md">
+								Ruang <span style="background: linear-gradient(90deg, #f59e0b, #fcd34d); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Layanan BK</span>
+							</h2>
+							<p class="text-blue-100/80 text-sm md:text-lg max-w-2xl mx-auto leading-relaxed font-light mb-10">
+								Sampaikan laporan, konsultasi, booking jadwal, saran, dan izin secara online. Aman, mudah, dan terpantau langsung oleh Guru BK.
+							</p>
+
+							<!-- Preview 5 Layanan -->
+							<div class="grid grid-cols-2 md:grid-cols-5 gap-3 mb-12 max-w-3xl mx-auto" id="preview-layanan"></div>
+
+							<!-- Tombol Masuk & Daftar -->
+							<div class="flex flex-col sm:flex-row gap-4 justify-center">
+								<button onclick="navigasiLayanan('layanan-login')"
+									class="bg-amber-500 text-blue-900 font-extrabold px-10 py-4 rounded-full shadow-xl shadow-amber-500/30 hover:shadow-amber-500/50 hover:-translate-y-1 transition inline-flex items-center justify-center gap-2 text-sm">
+									<i class="ph-bold ph-sign-in"></i> Masuk ke Layanan
+								</button>
+								<button onclick="navigasiLayanan('layanan-register')"
+									class="bg-white/10 backdrop-blur border border-white/20 text-white font-extrabold px-10 py-4 rounded-full hover:bg-white/20 hover:-translate-y-1 transition inline-flex items-center justify-center gap-2 text-sm">
+									<i class="ph-bold ph-user-plus"></i> Buat Akun Baru
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- SUB HALAMAN 2: LOGIN -->
+				<div id="layanan-login" class="layanan-sub hidden">
+					<div class="min-h-screen flex items-center justify-center px-4 py-20">
+						<div class="w-full max-w-md">
+							<!-- Kartu Login -->
+							<div class="bg-white rounded-[2rem] shadow-2xl overflow-hidden">
+								<!-- Header kartu -->
+								<div class="bg-gradient-to-br from-blue-950 to-blue-800 px-8 py-8 text-center relative overflow-hidden">
+									<div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-10"></div>
+									<div class="relative z-10">
+										<div class="w-16 h-16 bg-amber-500 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
+											<i class="ph-fill ph-sign-in text-white text-3xl"></i>
+										</div>
+										<h3 class="text-xl font-extrabold text-white mb-1">Masuk Layanan BK</h3>
+										<p class="text-blue-200/70 text-xs">Gunakan username & nomor HP terdaftar</p>
+									</div>
+								</div>
+
+								<!-- Form Login -->
+								<div class="p-8 space-y-5">
+									<div>
+										<label class="block text-xs font-bold text-slate-500 uppercase tracking-widest mb-2">Username</label>
+										<div class="relative">
+											<input id="login-username" type="text" placeholder="Masukkan username"
+												class="w-full bg-slate-50 border-2 border-slate-200 rounded-xl px-4 py-3 pl-11 text-sm outline-none focus:border-amber-400 focus:ring-2 focus:ring-amber-100 transition">
+											<i class="ph-fill ph-user absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-300 text-lg"></i>
+										</div>
+									</div>
+									<div>
+										<label class="block text-xs font-bold text-slate-500 uppercase tracking-widest mb-2">Nomor HP</label>
+										<div class="relative">
+											<input id="login-nohp" type="tel" placeholder="Contoh: 081234567890"
+												class="w-full bg-slate-50 border-2 border-slate-200 rounded-xl px-4 py-3 pl-11 text-sm outline-none focus:border-amber-400 focus:ring-2 focus:ring-amber-100 transition">
+											<i class="ph-fill ph-phone absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-300 text-lg"></i>
+										</div>
+									</div>
+
+									<!-- CAPTCHA -->
+									<div id="captcha-box-login" class="hidden">
+										<label class="block text-xs font-bold text-slate-500 uppercase tracking-widest mb-2">Verifikasi</label>
+										<div class="bg-slate-50 border-2 border-slate-200 rounded-xl px-4 py-3 flex items-center justify-between">
+											<p id="captcha-soal-login" class="font-extrabold text-slate-700 text-sm"></p>
+											<button onclick="buatCaptcha('login')" class="text-blue-500 hover:text-blue-700 transition">
+												<i class="ph-bold ph-arrows-clockwise"></i>
+											</button>
+										</div>
+										<input id="captcha-jawab-login" type="number" placeholder="Tulis jawaban di sini"
+											class="w-full mt-2 bg-slate-50 border-2 border-slate-200 rounded-xl px-4 py-3 text-sm outline-none focus:border-amber-400 focus:ring-2 focus:ring-amber-100 transition">
+									</div>
+
+									<button onclick="prosesLogin()"
+										class="w-full bg-gradient-to-r from-blue-900 to-blue-700 text-white font-extrabold py-4 rounded-xl shadow-lg hover:shadow-blue-900/30 hover:-translate-y-0.5 transition flex items-center justify-center gap-2">
+										<i class="ph-bold ph-sign-in"></i> Masuk Sekarang
+									</button>
+
+									<p class="text-center text-xs text-slate-400">Belum punya akun?
+										<button onclick="navigasiLayanan('layanan-register')" class="text-blue-600 font-bold hover:underline">Daftar di sini</button>
+									</p>
+									<p class="text-center text-xs text-slate-400">
+										<button onclick="navigasiLayanan('layanan-landing')" class="text-slate-400 hover:text-blue-600 transition flex items-center gap-1 mx-auto">
+											<i class="ph-bold ph-arrow-left"></i> Kembali ke Landing
+										</button>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- SUB HALAMAN 3: REGISTER -->
+				<div id="layanan-register" class="layanan-sub hidden">
+					<div class="min-h-screen flex items-center justify-center px-4 py-20">
+						<div class="w-full max-w-md">
+							<div class="bg-white rounded-[2rem] shadow-2xl overflow-hidden">
+								<!-- Header -->
+								<div class="bg-gradient-to-br from-blue-950 to-blue-800 px-8 py-8 text-center relative overflow-hidden">
+									<div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-10"></div>
+									<div class="relative z-10">
+										<div class="w-16 h-16 bg-emerald-500 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
+											<i class="ph-fill ph-user-plus text-white text-3xl"></i>
+										</div>
+										<h3 class="text-xl font-extrabold text-white mb-1">Buat Akun Baru</h3>
+										<p class="text-blue-200/70 text-xs">Daftarkan diri untuk mengakses layanan BK</p>
+									</div>
+								</div>
+
+								<!-- Form Register -->
+								<div class="p-8 space-y-4">
+									<!-- Pilih Status -->
+									<div>
+										<label class="block text-xs font-bold text-slate-500 uppercase tracking-widest mb-2">Saya adalah</label>
+										<div class="grid grid-cols-3 gap-2" id="grid-status-daftar"></div>
+									</div>
+
+									<div>
+										<label class="block text-xs font-bold text-slate-500 uppercase tracking-widest mb-2">Username</label>
+										<input id="reg-username" type="text" placeholder="Buat username unik"
+											class="w-full bg-slate-50 border-2 border-slate-200 rounded-xl px-4 py-3 text-sm outline-none focus:border-amber-400 transition">
+									</div>
+									<div>
+										<label class="block text-xs font-bold text-slate-500 uppercase tracking-widest mb-2">Nama Lengkap</label>
+										<input id="reg-nama" type="text" placeholder="Nama lengkap"
+											class="w-full bg-slate-50 border-2 border-slate-200 rounded-xl px-4 py-3 text-sm outline-none focus:border-amber-400 transition">
+									</div>
+									<div>
+										<label class="block text-xs font-bold text-slate-500 uppercase tracking-widest mb-2">Nomor HP</label>
+										<input id="reg-nohp" type="tel" placeholder="Contoh: 081234567890"
+											class="w-full bg-slate-50 border-2 border-slate-200 rounded-xl px-4 py-3 text-sm outline-none focus:border-amber-400 transition">
+									</div>
+
+									<!-- Field Dinamis -->
+									<div id="reg-field-kelas" class="hidden">
+										<label class="block text-xs font-bold text-slate-500 uppercase tracking-widest mb-2">Kelas</label>
+										<input id="reg-kelas" type="text" placeholder="Contoh: VIII A"
+											class="w-full bg-slate-50 border-2 border-slate-200 rounded-xl px-4 py-3 text-sm outline-none focus:border-amber-400 transition">
+									</div>
+									<div id="reg-field-nama-siswa" class="hidden">
+										<label class="block text-xs font-bold text-slate-500 uppercase tracking-widest mb-2">Nama Siswa</label>
+										<input id="reg-nama-siswa" type="text" placeholder="Nama lengkap siswa"
+											class="w-full bg-slate-50 border-2 border-slate-200 rounded-xl px-4 py-3 text-sm outline-none focus:border-amber-400 transition">
+									</div>
+									<div id="reg-field-alamat" class="hidden">
+										<label class="block text-xs font-bold text-slate-500 uppercase tracking-widest mb-2">Alamat</label>
+										<input id="reg-alamat" type="text" placeholder="Alamat lengkap"
+											class="w-full bg-slate-50 border-2 border-slate-200 rounded-xl px-4 py-3 text-sm outline-none focus:border-amber-400 transition">
+									</div>
+
+									<!-- CAPTCHA Register -->
+									<div id="captcha-box-register" class="hidden">
+										<label class="block text-xs font-bold text-slate-500 uppercase tracking-widest mb-2">Verifikasi</label>
+										<div class="bg-slate-50 border-2 border-slate-200 rounded-xl px-4 py-3 flex items-center justify-between">
+											<p id="captcha-soal-register" class="font-extrabold text-slate-700 text-sm"></p>
+											<button onclick="buatCaptcha('register')" class="text-blue-500 hover:text-blue-700 transition">
+												<i class="ph-bold ph-arrows-clockwise"></i>
+											</button>
+										</div>
+										<input id="captcha-jawab-register" type="number" placeholder="Tulis jawaban di sini"
+											class="w-full mt-2 bg-slate-50 border-2 border-slate-200 rounded-xl px-4 py-3 text-sm outline-none focus:border-amber-400 transition">
+									</div>
+
+									<button onclick="prosesRegister()"
+										class="w-full bg-gradient-to-r from-emerald-600 to-emerald-500 text-white font-extrabold py-4 rounded-xl shadow-lg hover:shadow-emerald-500/30 hover:-translate-y-0.5 transition flex items-center justify-center gap-2">
+										<i class="ph-bold ph-user-plus"></i> Daftar Sekarang
+									</button>
+
+									<p class="text-center text-xs text-slate-400">Sudah punya akun?
+										<button onclick="navigasiLayanan('layanan-login')" class="text-blue-600 font-bold hover:underline">Masuk di sini</button>
+									</p>
+									<p class="text-center text-xs text-slate-400">
+										<button onclick="navigasiLayanan('layanan-landing')" class="text-slate-400 hover:text-blue-600 transition flex items-center gap-1 mx-auto">
+											<i class="ph-bold ph-arrow-left"></i> Kembali ke Landing
+										</button>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- SUB HALAMAN 4: DASHBOARD PENGGUNA -->
+				<div id="layanan-dashboard" class="layanan-sub hidden">
+					<div class="min-h-screen px-4 py-10 max-w-4xl mx-auto">
+
+						<!-- Header Dashboard -->
+						<div class="bg-white/10 backdrop-blur border border-white/15 rounded-[2rem] p-6 mb-8 flex items-center justify-between">
+							<div class="flex items-center gap-4">
+								<div class="w-14 h-14 rounded-2xl bg-amber-500 flex items-center justify-center shadow-lg shrink-0">
+									<i class="ph-fill ph-user text-white text-2xl"></i>
+								</div>
+								<div>
+									<p class="text-[10px] font-bold text-blue-300 uppercase tracking-widest mb-1">Selamat Datang</p>
+									<h3 id="dashboard-nama-pengguna" class="text-xl font-extrabold text-white leading-tight">-</h3>
+									<span id="dashboard-status-pengguna" class="inline-block bg-amber-500/20 text-amber-300 text-[9px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full mt-1">-</span>
+								</div>
+							</div>
+							<button onclick="logoutPengguna()"
+								class="shrink-0 flex items-center gap-2 bg-red-500/20 text-red-300 hover:bg-red-500 hover:text-white px-4 py-2.5 rounded-xl font-bold text-xs transition">
+								<i class="ph-bold ph-sign-out"></i> Keluar
+							</button>
+						</div>
+
+						<!-- 5 Kartu Layanan -->
+						<div class="grid grid-cols-2 md:grid-cols-3 gap-4 mb-8" id="grid-layanan-dashboard"></div>
+
+						<!-- Riwayat Terakhir -->
+						<div class="bg-white/10 backdrop-blur border border-white/15 rounded-[2rem] p-6">
+							<h4 class="font-extrabold text-white text-base mb-5 flex items-center gap-2">
+								<i class="ph-fill ph-clock-countdown text-amber-400"></i> Riwayat Layanan Terakhir
+							</h4>
+							<div id="riwayat-container" class="space-y-3">
+								<p class="text-blue-300/60 text-sm text-center py-6 italic">Belum ada riwayat layanan.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- SUB HALAMAN 5-9: PLACEHOLDER LAYANAN (diisi Tahap berikutnya) -->
+				<div id="layanan-lapor" class="layanan-sub hidden">
+					<div class="min-h-screen px-4 py-10 max-w-2xl mx-auto">
+
+						<!-- Header -->
+						<div class="flex items-center gap-4 mb-8">
+							<button onclick="navigasiLayanan('layanan-dashboard')"
+								class="w-10 h-10 rounded-xl bg-white/10 border border-white/15 flex items-center justify-center text-white hover:bg-white/20 transition shrink-0">
+								<i class="ph-bold ph-arrow-left"></i>
+							</button>
+							<div>
+								<h3 class="text-xl font-extrabold text-white">Laporan</h3>
+								<p class="text-blue-200/60 text-xs mt-0.5">Laporkan tindakan perundungan atau pelanggaran</p>
+							</div>
+						</div>
+
+						<!-- Form Laporan -->
+						<div class="bg-white/10 backdrop-blur border border-white/15 rounded-[2rem] p-6 mb-6">
+							<h4 class="font-extrabold text-white text-sm mb-5 flex items-center gap-2">
+								<i class="ph-fill ph-flag text-red-400"></i> Buat Laporan Baru
+							</h4>
+							<div class="space-y-4">
+
+								<!-- Pilih Identitas -->
+								<div>
+									<label class="block text-[10px] font-bold text-blue-300 uppercase tracking-widest mb-2">Identitas Pelapor</label>
+									<div class="grid grid-cols-2 gap-2">
+										<button onclick="pilihIdentitasLapor('cantumkan', this)"
+											id="lapor-id-cantumkan"
+											class="lapor-identitas-btn py-3 rounded-xl text-xs font-bold border-2 border-white/15 text-white/60 hover:border-amber-400/50 hover:text-white transition flex items-center justify-center gap-2">
+											<i class="ph-fill ph-user-circle text-base"></i> Cantumkan Nama
+										</button>
+										<button onclick="pilihIdentitasLapor('anonim', this)"
+											id="lapor-id-anonim"
+											class="lapor-identitas-btn py-3 rounded-xl text-xs font-bold border-2 border-white/15 text-white/60 hover:border-amber-400/50 hover:text-white transition flex items-center justify-center gap-2">
+											<i class="ph-fill ph-user-slash text-base"></i> Anonim
+										</button>
+									</div>
+								</div>
+
+								<!-- Judul -->
+								<div>
+									<label class="block text-[10px] font-bold text-blue-300 uppercase tracking-widest mb-2">Judul Laporan</label>
+									<input id="lapor-judul" type="text" placeholder="Contoh: Perundungan di Kantin Sekolah"
+										class="w-full bg-white/5 border border-white/15 rounded-xl px-4 py-3 text-sm text-white placeholder-white/30 outline-none focus:border-amber-400/50 focus:bg-white/10 transition">
+								</div>
+
+								<!-- Isi / Kronologi -->
+								<div>
+									<label class="block text-[10px] font-bold text-blue-300 uppercase tracking-widest mb-2">Kronologi / Isi Laporan</label>
+									<textarea id="lapor-isi" rows="5" placeholder="Ceritakan kronologi kejadian secara detail..."
+										class="w-full bg-white/5 border border-white/15 rounded-xl px-4 py-3 text-sm text-white placeholder-white/30 outline-none focus:border-amber-400/50 focus:bg-white/10 transition resize-none"></textarea>
+								</div>
+
+								<!-- Nama Terduga Pelaku -->
+								<div>
+									<label class="block text-[10px] font-bold text-blue-300 uppercase tracking-widest mb-2">Nama Terduga Pelaku</label>
+									<input id="lapor-pelaku" type="text" placeholder="Nama lengkap atau inisial"
+										class="w-full bg-white/5 border border-white/15 rounded-xl px-4 py-3 text-sm text-white placeholder-white/30 outline-none focus:border-amber-400/50 focus:bg-white/10 transition">
+								</div>
+
+								<!-- Lokasi -->
+								<div>
+									<label class="block text-[10px] font-bold text-blue-300 uppercase tracking-widest mb-2">Lokasi Kejadian</label>
+									<input id="lapor-lokasi" type="text" placeholder="Contoh: Kantin lt. 1, Kelas VIII A, dll."
+										class="w-full bg-white/5 border border-white/15 rounded-xl px-4 py-3 text-sm text-white placeholder-white/30 outline-none focus:border-amber-400/50 focus:bg-white/10 transition">
+								</div>
+
+								<!-- Tanggal & Jam -->
+								<div class="grid grid-cols-2 gap-3">
+									<div>
+										<label class="block text-[10px] font-bold text-blue-300 uppercase tracking-widest mb-2">Tanggal Kejadian</label>
+										<input id="lapor-tanggal" type="date"
+											class="w-full bg-white/5 border border-white/15 rounded-xl px-4 py-3 text-sm text-white outline-none focus:border-amber-400/50 focus:bg-white/10 transition [color-scheme:dark]">
+									</div>
+									<div>
+										<label class="block text-[10px] font-bold text-blue-300 uppercase tracking-widest mb-2">Jam Kejadian</label>
+										<input id="lapor-jam" type="time"
+											class="w-full bg-white/5 border border-white/15 rounded-xl px-4 py-3 text-sm text-white outline-none focus:border-amber-400/50 focus:bg-white/10 transition [color-scheme:dark]">
+									</div>
+								</div>
+
+								<!-- Upload Bukti -->
+								<div>
+									<label class="block text-[10px] font-bold text-blue-300 uppercase tracking-widest mb-2">
+										Bukti Foto <span class="text-white/30 normal-case font-normal">(opsional, maks. 200 KB)</span>
+									</label>
+									<div class="relative">
+										<input id="lapor-foto-input" type="file" accept="image/*" class="hidden"
+											onchange="handleUploadBuktiFoto(this)">
+										<button onclick="document.getElementById('lapor-foto-input').click()"
+											id="lapor-foto-btn"
+											class="w-full bg-white/5 border-2 border-dashed border-white/20 rounded-xl px-4 py-5 text-sm text-white/40 hover:border-amber-400/50 hover:text-white/60 hover:bg-white/10 transition flex flex-col items-center gap-2">
+											<i class="ph-fill ph-image text-2xl"></i>
+											<span class="text-xs">Klik untuk pilih foto</span>
+										</button>
+										<!-- Preview foto -->
+										<div id="lapor-foto-preview" class="hidden mt-3 relative">
+											<img id="lapor-foto-img" src="" class="w-full rounded-xl object-cover max-h-48 border border-white/15">
+											<button onclick="hapusBuktiFoto()"
+												class="absolute top-2 right-2 w-8 h-8 bg-red-500 rounded-full flex items-center justify-center text-white hover:bg-red-600 transition">
+												<i class="ph-bold ph-x text-sm"></i>
+											</button>
+											<p id="lapor-foto-nama" class="text-[10px] text-white/40 mt-1 text-center"></p>
+										</div>
+									</div>
+									<input type="hidden" id="lapor-foto-url" value="">
+								</div>
+
+								<!-- Tombol Kirim -->
+								<button onclick="kirimLaporan()"
+									class="w-full bg-gradient-to-r from-red-500 to-rose-500 text-white font-extrabold py-4 rounded-xl shadow-lg hover:opacity-90 hover:-translate-y-0.5 transition flex items-center justify-center gap-2">
+									<i class="ph-bold ph-paper-plane-tilt"></i> Kirim Laporan
+								</button>
+							</div>
+						</div>
+
+						<!-- Riwayat Laporan -->
+						<div class="bg-white/10 backdrop-blur border border-white/15 rounded-[2rem] p-6">
+							<div class="flex items-center justify-between mb-5">
+								<h4 class="font-extrabold text-white text-sm flex items-center gap-2">
+									<i class="ph-fill ph-clock-countdown text-amber-400"></i> Riwayat Laporanku
+								</h4>
+								<button onclick="muatRiwayatLaporan()" class="flex items-center gap-1.5 bg-white/10 hover:bg-white/20 text-white/70 hover:text-white px-3 py-1.5 rounded-full text-[10px] font-bold transition">
+									<i class="ph-bold ph-arrows-clockwise"></i> Refresh
+								</button>
+							</div>
+
+							<div class="flex gap-2 mb-4 flex-wrap">
+								<button onclick="filterLaporanPengguna('Semua', this)" class="lapor-filter-btn px-4 py-1.5 rounded-full text-[10px] font-bold border transition bg-amber-500 text-blue-900 border-amber-500">
+									Semua
+								</button>
+								<button onclick="filterLaporanPengguna('Masuk', this)" class="lapor-filter-btn px-4 py-1.5 rounded-full text-[10px] font-bold border transition bg-white/5 text-white/60 border-white/15 hover:border-amber-400/50 hover:text-white">
+									Masuk
+								</button>
+								<button onclick="filterLaporanPengguna('Diproses', this)" class="lapor-filter-btn px-4 py-1.5 rounded-full text-[10px] font-bold border transition bg-white/5 text-white/60 border-white/15 hover:border-amber-400/50 hover:text-white">
+									Diproses
+								</button>
+								<button onclick="filterLaporanPengguna('Selesai', this)" class="lapor-filter-btn px-4 py-1.5 rounded-full text-[10px] font-bold border transition bg-white/5 text-white/60 border-white/15 hover:border-amber-400/50 hover:text-white">
+									Selesai
+								</button>
+							</div>
+
+							<div id="lapor-pengguna-list" class="space-y-3">
+								<p class="text-blue-300/60 text-sm text-center py-6 italic">Memuat riwayat...</p>
+							</div>
+
+							<div id="lapor-pengguna-paginasi" class="mt-4"></div>
+						</div>
+
+					</div>
+				</div>
+				<div id="layanan-konsultasi" class="layanan-sub hidden">
+					<div class="min-h-screen px-4 py-10 max-w-2xl mx-auto">
+
+						<!-- Header -->
+						<div class="flex items-center gap-4 mb-8">
+							<button onclick="navigasiLayanan('layanan-dashboard')"
+								class="w-10 h-10 rounded-xl bg-white/10 border border-white/15 flex items-center justify-center text-white hover:bg-white/20 transition shrink-0">
+								<i class="ph-bold ph-arrow-left"></i>
+							</button>
+							<div>
+								<h3 class="text-xl font-extrabold text-white">Konsultasi</h3>
+								<p class="text-blue-200/60 text-xs mt-0.5">Konsultasikan masalahmu dengan Guru BK</p>
+							</div>
+						</div>
+
+						<!-- PANEL: Buat Sesi Baru -->
+						<div id="konsultasi-panel-baru" class="bg-white/10 backdrop-blur border border-white/15 rounded-[2rem] p-6 mb-6">
+							<h4 class="font-extrabold text-white text-sm mb-5 flex items-center gap-2">
+								<i class="ph-fill ph-plus-circle text-amber-400"></i> Buat Sesi Konsultasi Baru
+							</h4>
+
+							<!-- Info batas sesi -->
+							<div id="konsultasi-info-batas" class="hidden mb-4 bg-red-500/20 border border-red-500/30 rounded-xl px-4 py-3">
+								<p class="text-red-300 text-xs font-bold flex items-center gap-2">
+									<i class="ph-fill ph-warning-circle"></i>
+									Kamu sudah memiliki 3 sesi aktif. Selesaikan atau batalkan sesi lama sebelum membuka yang baru.
+								</p>
+							</div>
+
+							<div id="konsultasi-form-baru" class="space-y-4">
+								<!-- Pilih Guru BK -->
+								<div>
+									<label class="block text-[10px] font-bold text-blue-300 uppercase tracking-widest mb-2">
+										Pilih Guru BK <span class="text-red-400">*</span>
+									</label>
+									<div id="konsultasi-list-guru" class="grid grid-cols-1 gap-2">
+										<div class="flex items-center gap-2 text-blue-300/60 text-xs py-3">
+											<div class="w-4 h-4 border-2 border-blue-400 border-t-transparent rounded-full animate-spin"></div>
+											Memuat daftar Guru BK...
+										</div>
+									</div>
+								</div>
+
+								<!-- Topik -->
+								<div>
+									<label class="block text-[10px] font-bold text-blue-300 uppercase tracking-widest mb-2">
+										Topik Konsultasi <span class="text-red-400">*</span>
+									</label>
+									<input id="konsultasi-topik" type="text" maxlength="100"
+										placeholder="Contoh: Masalah belajar, pemilihan jurusan, dll."
+										class="w-full bg-white/5 border border-white/15 rounded-xl px-4 py-3 text-sm text-white placeholder-white/30 outline-none focus:border-amber-400/50 focus:bg-white/10 transition">
+									<p class="text-white/30 text-[10px] mt-1 text-right" id="konsultasi-topik-counter">0/100</p>
+								</div>
+
+								<!-- Deskripsi Awal -->
+								<div>
+									<label class="block text-[10px] font-bold text-blue-300 uppercase tracking-widest mb-2">
+										Ceritakan Masalahmu <span class="text-red-400">*</span>
+									</label>
+									<textarea id="konsultasi-deskripsi" rows="4" maxlength="500"
+										placeholder="Jelaskan secara singkat apa yang ingin kamu konsultasikan..."
+										class="w-full bg-white/5 border border-white/15 rounded-xl px-4 py-3 text-sm text-white placeholder-white/30 outline-none focus:border-amber-400/50 focus:bg-white/10 transition resize-none"></textarea>
+									<p class="text-white/30 text-[10px] mt-1 text-right" id="konsultasi-desk-counter">0/500</p>
+								</div>
+
+								<button onclick="kirimSesiKonsultasi()"
+									id="btn-kirim-konsultasi"
+									class="w-full bg-gradient-to-r from-blue-600 to-blue-500 text-white font-extrabold py-4 rounded-xl shadow-lg hover:opacity-90 hover:-translate-y-0.5 transition flex items-center justify-center gap-2">
+									<i class="ph-bold ph-paper-plane-tilt"></i> Mulai Sesi Konsultasi
+								</button>
+							</div>
+						</div>
+
+						<!-- PANEL: Daftar Sesi -->
+						<div class="bg-white/10 backdrop-blur border border-white/15 rounded-[2rem] p-6">
+							<div class="flex items-center justify-between mb-5">
+								<h4 class="font-extrabold text-white text-sm flex items-center gap-2">
+									<i class="ph-fill ph-chats-circle text-blue-400"></i> Sesi Konsultasiku
+								</h4>
+								<button onclick="muatSesiKonsultasi()"
+									class="flex items-center gap-1.5 bg-white/10 hover:bg-white/20 text-white/70 hover:text-white px-3 py-1.5 rounded-full text-[10px] font-bold transition">
+									<i class="ph-bold ph-arrows-clockwise" id="icon-refresh-konsultasi"></i> Refresh
+								</button>
+							</div>
+
+							<!-- Filter Tab -->
+							<div class="flex gap-2 mb-4 flex-wrap">
+								<button onclick="filterSesiKonsultasi('semua', this)"
+									class="sesi-filter-btn px-4 py-1.5 rounded-full text-[10px] font-bold border transition bg-amber-500 text-blue-900 border-amber-500">
+									Semua
+								</button>
+								<button onclick="filterSesiKonsultasi('Aktif', this)"
+									class="sesi-filter-btn px-4 py-1.5 rounded-full text-[10px] font-bold border transition bg-white/5 text-white/60 border-white/15 hover:border-amber-400/50 hover:text-white">
+									Aktif
+								</button>
+								<button onclick="filterSesiKonsultasi('Selesai', this)"
+									class="sesi-filter-btn px-4 py-1.5 rounded-full text-[10px] font-bold border transition bg-white/5 text-white/60 border-white/15 hover:border-amber-400/50 hover:text-white">
+									Selesai
+								</button>
+								<button onclick="filterSesiKonsultasi('Dibatalkan', this)"
+									class="sesi-filter-btn px-4 py-1.5 rounded-full text-[10px] font-bold border transition bg-white/5 text-white/60 border-white/15 hover:border-amber-400/50 hover:text-white">
+									Dibatalkan
+								</button>
+							</div>
+
+							<div id="konsultasi-sesi-list" class="space-y-3">
+								<p class="text-blue-300/60 text-sm text-center py-6 italic">Memuat sesi...</p>
+							</div>
+						</div>
+
+						<!-- PANEL: Chat Sesi (tersembunyi, muncul saat buka sesi) -->
+						<div id="konsultasi-panel-chat" class="hidden fixed inset-0 z-[80] bg-gradient-to-br from-blue-950 via-blue-900 to-blue-800 flex flex-col">
+
+							<!-- Header Chat -->
+							<div class="shrink-0 px-4 py-4 border-b border-white/10 flex items-center gap-3 bg-blue-950/50 backdrop-blur">
+								<button onclick="tutupPanelChat()"
+									class="w-9 h-9 rounded-xl bg-white/10 flex items-center justify-center text-white hover:bg-white/20 transition shrink-0">
+									<i class="ph-bold ph-arrow-left"></i>
+								</button>
+								<div class="flex-1 min-w-0">
+									<p id="chat-judul" class="text-white font-extrabold text-sm truncate">-</p>
+									<p id="chat-guru" class="text-blue-300/60 text-[10px] mt-0.5 truncate">-</p>
+								</div>
+								<div class="flex items-center gap-2 shrink-0">
+									<!-- TOMBOL REFRESH PENGGUNA -->
+									<button onclick="refreshChatPengguna()" id="btn-refresh-chat-pengguna"
+										class="w-9 h-9 rounded-xl bg-white/10 hover:bg-white/20 text-white/70 hover:text-white flex items-center justify-center transition"
+										title="Refresh pesan">
+										<i class="ph-bold ph-arrows-clockwise text-sm" id="icon-refresh-chat-pengguna"></i>
+									</button>
+									<span id="chat-status-badge" class="text-[9px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full border">-</span>
+									<button onclick="konfirmasiBatalkanSesi()"
+										id="btn-batalkan-sesi"
+										class="hidden w-9 h-9 rounded-xl bg-red-500/20 text-red-300 hover:bg-red-500 hover:text-white transition flex items-center justify-center" title="Batalkan Sesi">
+										<i class="ph-bold ph-x-circle text-sm"></i>
+									</button>
+								</div>
+							</div>
+
+							<!-- Info Sesi -->
+							<div id="chat-info-sesi" class="shrink-0 mx-4 mt-3 bg-white/5 border border-white/10 rounded-2xl px-4 py-3">
+								<p class="text-[9px] font-bold text-blue-300/60 uppercase tracking-widest mb-1">Deskripsi Awal</p>
+								<p id="chat-deskripsi-awal" class="text-white/70 text-xs leading-relaxed">-</p>
+							</div>
+
+							<!-- Area Pesan + Toast -->
+							<div class="flex-1 overflow-hidden flex flex-col relative">
+								<!-- Toast pesan baru pengguna -->
+								<div id="toast-pesan-baru-pengguna"
+									class="hidden absolute top-3 left-1/2 -translate-x-1/2 z-10 bg-amber-500 text-blue-900 text-xs font-extrabold px-4 py-2 rounded-full shadow-lg flex items-center gap-2 animate-bounce">
+									<i class="ph-fill ph-bell-ringing"></i> Ada pesan baru!
+								</div>
+								<div id="chat-messages" class="flex-1 overflow-y-auto px-4 py-4 space-y-3">
+								</div>
+							</div>
+
+							<!-- Info batas pesan -->
+							<div id="chat-batas-info" class="hidden shrink-0 mx-4 mb-2">
+								<div class="bg-amber-500/20 border border-amber-500/30 rounded-xl px-4 py-2.5 flex items-center gap-2">
+									<i class="ph-fill ph-warning text-amber-400 text-sm shrink-0"></i>
+									<p class="text-amber-300 text-[10px] font-bold">Batas 20 pesan tercapai. Buka sesi baru jika masih perlu berkonsultasi.</p>
+								</div>
+							</div>
+
+							<!-- Input Pesan -->
+							<div id="chat-input-area" class="shrink-0 px-4 pb-6 pt-3 border-t border-white/10 bg-blue-950/30">
+								<div class="flex gap-2 items-end">
+									<div class="flex-1 relative">
+										<textarea id="chat-input-pesan" rows="1" maxlength="500"
+											placeholder="Tulis pesanmu di sini..."
+											oninput="autoResizeChatInput(this); hitungKarakterChat(this)"
+											class="w-full bg-white/5 border border-white/15 rounded-2xl px-4 py-3 text-sm text-white placeholder-white/30 outline-none focus:border-amber-400/50 focus:bg-white/10 transition resize-none max-h-32"></textarea>
+										<p id="chat-karakter-counter" class="absolute bottom-2 right-3 text-white/20 text-[9px] font-bold">0/500</p>
+									</div>
+									<button onclick="kirimPesanKonsultasi()"
+										id="btn-kirim-pesan"
+										class="w-11 h-11 rounded-2xl bg-amber-500 text-blue-900 flex items-center justify-center hover:bg-amber-400 hover:-translate-y-0.5 transition shadow-lg shrink-0">
+										<i class="ph-bold ph-paper-plane-tilt text-base"></i>
+									</button>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+				<div id="layanan-booking" class="layanan-sub hidden">
+					<div class="min-h-screen px-4 py-10 max-w-2xl mx-auto">
+
+						<!-- Header -->
+						<div class="flex items-center gap-4 mb-8">
+							<button onclick="navigasiLayanan('layanan-dashboard')"
+								class="w-10 h-10 rounded-xl bg-white/10 border border-white/15 flex items-center justify-center text-white hover:bg-white/20 transition shrink-0">
+								<i class="ph-bold ph-arrow-left"></i>
+							</button>
+							<div>
+								<h3 class="text-xl font-extrabold text-white">Booking Konseling</h3>
+								<p class="text-blue-200/60 text-xs mt-0.5">Pesan jadwal konseling tatap muka dengan Guru BK</p>
+							</div>
+						</div>
+
+						<!-- FORM BOOKING BARU -->
+						<div class="bg-white/10 backdrop-blur border border-white/15 rounded-[2rem] p-6 mb-6">
+							<h4 class="font-extrabold text-white text-sm mb-5 flex items-center gap-2">
+								<i class="ph-fill ph-calendar-plus text-emerald-400"></i> Buat Booking Baru
+							</h4>
+							<div class="space-y-4">
+
+								<!-- Pilih Guru BK -->
+								<div>
+									<label class="block text-[10px] font-bold text-blue-300 uppercase tracking-widest mb-2">
+										Pilih Guru BK <span class="text-red-400">*</span>
+									</label>
+									<div id="booking-list-guru" class="grid grid-cols-1 gap-2">
+										<div class="flex items-center gap-2 text-blue-300/60 text-xs py-3">
+											<div class="w-4 h-4 border-2 border-blue-400 border-t-transparent rounded-full animate-spin"></div>
+											Memuat daftar Guru BK...
+										</div>
+									</div>
+								</div>
+
+								<!-- Keperluan / Topik -->
+								<div>
+									<label class="block text-[10px] font-bold text-blue-300 uppercase tracking-widest mb-2">
+										Keperluan / Topik Konseling <span class="text-red-400">*</span>
+									</label>
+									<input id="booking-keperluan" type="text" maxlength="120"
+										placeholder="Contoh: Konseling karir, masalah belajar, dll."
+										class="w-full bg-white/5 border border-white/15 rounded-xl px-4 py-3 text-sm text-white placeholder-white/30 outline-none focus:border-emerald-400/50 focus:bg-white/10 transition">
+									<p class="text-white/30 text-[10px] mt-1 text-right" id="booking-keperluan-counter">0/120</p>
+								</div>
+
+								<!-- Deskripsi Awal -->
+								<div>
+									<label class="block text-[10px] font-bold text-blue-300 uppercase tracking-widest mb-2">
+										Deskripsi Singkat Masalah <span class="text-red-400">*</span>
+									</label>
+									<textarea id="booking-deskripsi" rows="4" maxlength="500"
+										placeholder="Ceritakan secara singkat apa yang ingin kamu konsultasikan saat pertemuan..."
+										class="w-full bg-white/5 border border-white/15 rounded-xl px-4 py-3 text-sm text-white placeholder-white/30 outline-none focus:border-emerald-400/50 focus:bg-white/10 transition resize-none"></textarea>
+									<p class="text-white/30 text-[10px] mt-1 text-right" id="booking-deskripsi-counter">0/500</p>
+								</div>
+
+								<!-- Tanggal & Jam Diinginkan -->
+								<div class="grid grid-cols-2 gap-3">
+									<div>
+										<label class="block text-[10px] font-bold text-blue-300 uppercase tracking-widest mb-2">
+											Tanggal Diinginkan <span class="text-red-400">*</span>
+										</label>
+										<input id="booking-tanggal" type="date"
+											class="w-full bg-white/5 border border-white/15 rounded-xl px-4 py-3 text-sm text-white outline-none focus:border-emerald-400/50 focus:bg-white/10 transition [color-scheme:dark]">
+									</div>
+									<div>
+										<label class="block text-[10px] font-bold text-blue-300 uppercase tracking-widest mb-2">
+											Jam Diinginkan <span class="text-red-400">*</span>
+										</label>
+										<select id="booking-jam"
+											class="w-full bg-white/5 border border-white/15 rounded-xl px-4 py-3 text-sm text-white outline-none focus:border-emerald-400/50 focus:bg-white/10 transition [color-scheme:dark] cursor-pointer">
+											<option value="" class="bg-blue-900">-- Pilih Jam --</option>
+											<option value="07:00" class="bg-blue-900">07:00</option>
+											<option value="07:30" class="bg-blue-900">07:30</option>
+											<option value="08:00" class="bg-blue-900">08:00</option>
+											<option value="08:30" class="bg-blue-900">08:30</option>
+											<option value="09:00" class="bg-blue-900">09:00</option>
+											<option value="09:30" class="bg-blue-900">09:30</option>
+											<option value="10:00" class="bg-blue-900">10:00</option>
+											<option value="10:30" class="bg-blue-900">10:30</option>
+											<option value="11:00" class="bg-blue-900">11:00</option>
+											<option value="11:30" class="bg-blue-900">11:30</option>
+											<option value="12:00" class="bg-blue-900">12:00</option>
+											<option value="13:00" class="bg-blue-900">13:00</option>
+											<option value="13:30" class="bg-blue-900">13:30</option>
+											<option value="14:00" class="bg-blue-900">14:00</option>
+										</select>
+									</div>
+								</div>
+
+								<!-- Tombol Kirim -->
+								<button onclick="kirimBooking()"
+									class="w-full bg-gradient-to-r from-emerald-600 to-emerald-500 text-white font-extrabold py-4 rounded-xl shadow-lg hover:opacity-90 hover:-translate-y-0.5 transition flex items-center justify-center gap-2">
+									<i class="ph-bold ph-paper-plane-tilt"></i> Kirim Booking
+								</button>
+							</div>
+						</div>
+
+						<!-- RIWAYAT BOOKING -->
+						<div class="bg-white/10 backdrop-blur border border-white/15 rounded-[2rem] p-6">
+							<div class="flex items-center justify-between mb-5">
+								<h4 class="font-extrabold text-white text-sm flex items-center gap-2">
+									<i class="ph-fill ph-clock-countdown text-emerald-400"></i> Riwayat Bookingku
+								</h4>
+								<button onclick="muatRiwayatBooking()"
+									class="flex items-center gap-1.5 bg-white/10 hover:bg-white/20 text-white/70 hover:text-white px-3 py-1.5 rounded-full text-[10px] font-bold transition">
+									<i class="ph-bold ph-arrows-clockwise"></i> Refresh
+								</button>
+							</div>
+
+							<!-- Filter Tab -->
+							<div class="flex gap-2 mb-4 flex-wrap">
+								<button onclick="filterBookingPengguna('Semua', this)"
+									class="booking-filter-btn px-4 py-1.5 rounded-full text-[10px] font-bold border transition bg-amber-500 text-blue-900 border-amber-500">
+									Semua
+								</button>
+								<button onclick="filterBookingPengguna('Menunggu', this)"
+									class="booking-filter-btn px-4 py-1.5 rounded-full text-[10px] font-bold border transition bg-white/5 text-white/60 border-white/15 hover:border-amber-400/50 hover:text-white">
+									Menunggu
+								</button>
+								<button onclick="filterBookingPengguna('Dikonfirmasi', this)"
+									class="booking-filter-btn px-4 py-1.5 rounded-full text-[10px] font-bold border transition bg-white/5 text-white/60 border-white/15 hover:border-amber-400/50 hover:text-white">
+									Dikonfirmasi
+								</button>
+								<button onclick="filterBookingPengguna('Selesai', this)"
+									class="booking-filter-btn px-4 py-1.5 rounded-full text-[10px] font-bold border transition bg-white/5 text-white/60 border-white/15 hover:border-amber-400/50 hover:text-white">
+									Selesai
+								</button>
+								<button onclick="filterBookingPengguna('Ditolak', this)"
+									class="booking-filter-btn px-4 py-1.5 rounded-full text-[10px] font-bold border transition bg-white/5 text-white/60 border-white/15 hover:border-amber-400/50 hover:text-white">
+									Ditolak
+								</button>
+								<button onclick="filterBookingPengguna('Dibatalkan', this)"
+									class="booking-filter-btn px-4 py-1.5 rounded-full text-[10px] font-bold border transition bg-white/5 text-white/60 border-white/15 hover:border-amber-400/50 hover:text-white">
+									Dibatalkan
+								</button>
+							</div>
+
+							<div id="booking-pengguna-list" class="space-y-3">
+								<p class="text-blue-300/60 text-sm text-center py-6 italic">Memuat riwayat...</p>
+							</div>
+							<div id="booking-pengguna-paginasi" class="mt-4"></div>
+						</div>
+
+					</div>
+				</div>
+				<div id="layanan-saran" class="layanan-sub hidden">
+					<div class="min-h-screen px-4 py-10 max-w-2xl mx-auto">
+
+						<!-- Header -->
+						<div class="flex items-center gap-4 mb-8">
+							<button onclick="navigasiLayanan('layanan-dashboard')"
+								class="w-10 h-10 rounded-xl bg-white/10 border border-white/15 flex items-center justify-center text-white hover:bg-white/20 transition shrink-0">
+								<i class="ph-bold ph-arrow-left"></i>
+							</button>
+							<div>
+								<h3 class="text-xl font-extrabold text-white">Kotak Saran</h3>
+								<p class="text-blue-200/60 text-xs mt-0.5">Sampaikan saranmu untuk sekolah</p>
+							</div>
+						</div>
+
+						<!-- Form Saran -->
+						<div class="bg-white/10 backdrop-blur border border-white/15 rounded-[2rem] p-6 mb-6">
+							<h4 class="font-extrabold text-white text-sm mb-5 flex items-center gap-2">
+								<i class="ph-fill ph-pencil-line text-amber-400"></i> Tulis Saran Baru
+							</h4>
+							<div class="space-y-4">
+								<div>
+									<label class="block text-[10px] font-bold text-blue-300 uppercase tracking-widest mb-2">Nama Pengirim</label>
+									<input id="saran-nama" type="text" readonly
+										class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm text-white/60 outline-none cursor-not-allowed">
+								</div>
+								<div>
+									<label class="block text-[10px] font-bold text-blue-300 uppercase tracking-widest mb-2">Isi Saran</label>
+									<textarea id="saran-isi" rows="5" placeholder="Tuliskan saranmu di sini..."
+										class="w-full bg-white/5 border border-white/15 rounded-xl px-4 py-3 text-sm text-white placeholder-white/30 outline-none focus:border-amber-400/50 focus:bg-white/10 transition resize-none"></textarea>
+								</div>
+								<button onclick="kirimSaran()"
+									class="w-full bg-gradient-to-r from-amber-500 to-amber-400 text-blue-900 font-extrabold py-4 rounded-xl shadow-lg hover:shadow-amber-500/30 hover:-translate-y-0.5 transition flex items-center justify-center gap-2">
+									<i class="ph-bold ph-paper-plane-tilt"></i> Kirim Saran
+								</button>
+							</div>
+						</div>
+
+						<!-- Riwayat Saran -->
+						<div class="bg-white/10 backdrop-blur border border-white/15 rounded-[2rem] p-6">
+							<h4 class="font-extrabold text-white text-sm mb-5 flex items-center gap-2">
+								<i class="ph-fill ph-clock-countdown text-amber-400"></i> Riwayat Saranku
+							</h4>
+							<div id="riwayat-saran" class="space-y-3">
+								<p class="text-blue-300/60 text-sm text-center py-6 italic">Memuat riwayat...</p>
+							</div>
+						</div>
+
+					</div>
+				</div>
+				<div id="layanan-izin" class="layanan-sub hidden">
+					<div class="min-h-screen px-4 py-10 max-w-2xl mx-auto">
+
+						<!-- Header -->
+						<div class="flex items-center gap-4 mb-8">
+							<button onclick="navigasiLayanan('layanan-dashboard')"
+								class="w-10 h-10 rounded-xl bg-white/10 border border-white/15 flex items-center justify-center text-white hover:bg-white/20 transition shrink-0">
+								<i class="ph-bold ph-arrow-left"></i>
+							</button>
+							<div>
+								<h3 class="text-xl font-extrabold text-white">Pengajuan Izin</h3>
+								<p class="text-blue-200/60 text-xs mt-0.5">Ajukan izin tidak hadir atau sakit</p>
+							</div>
+						</div>
+
+						<!-- FORM PENGAJUAN -->
+						<div class="bg-white/10 backdrop-blur border border-white/15 rounded-[2rem] p-6 mb-6">
+							<h4 class="font-extrabold text-white text-sm mb-5 flex items-center gap-2">
+								<i class="ph-fill ph-door-open text-violet-400"></i> Buat Pengajuan Baru
+							</h4>
+
+							<div class="space-y-4">
+
+								<!-- Pilih Guru BK -->
+								<div>
+									<label class="block text-[10px] font-bold text-blue-300 uppercase tracking-widest mb-2">
+										Pilih Guru BK <span class="text-red-400">*</span>
+									</label>
+									<div id="izin-list-guru" class="grid grid-cols-1 gap-2">
+										<div class="flex items-center gap-2 text-blue-300/60 text-xs py-3">
+											<div class="w-4 h-4 border-2 border-blue-400 border-t-transparent rounded-full animate-spin"></div>
+											Memuat daftar Guru BK...
+										</div>
+									</div>
+								</div>
+
+								<!-- Jenis Izin -->
+								<div>
+									<label class="block text-[10px] font-bold text-blue-300 uppercase tracking-widest mb-2">
+										Jenis Izin <span class="text-red-400">*</span>
+									</label>
+									<div class="grid grid-cols-2 gap-3">
+										<button onclick="pilihJenisIzin('Tidak Hadir', this)"
+											id="izin-btn-tidakhadir"
+											class="izin-jenis-btn py-3 rounded-xl text-xs font-bold border-2 border-white/15 text-white/60 hover:border-violet-400/50 hover:text-white transition flex items-center justify-center gap-2">
+											<i class="ph-fill ph-calendar-x text-base"></i> Tidak Hadir
+										</button>
+										<button onclick="pilihJenisIzin('Sakit', this)"
+											id="izin-btn-sakit"
+											class="izin-jenis-btn py-3 rounded-xl text-xs font-bold border-2 border-white/15 text-white/60 hover:border-violet-400/50 hover:text-white transition flex items-center justify-center gap-2">
+											<i class="ph-fill ph-first-aid text-base"></i> Sakit
+										</button>
+									</div>
+								</div>
+
+								<!-- Tanggal Mulai & Selesai -->
+								<div class="grid grid-cols-2 gap-3">
+									<div>
+										<label class="block text-[10px] font-bold text-blue-300 uppercase tracking-widest mb-2">
+											Tanggal Mulai <span class="text-red-400">*</span>
+										</label>
+										<input id="izin-tgl-mulai" type="date"
+											class="w-full bg-white/5 border border-white/15 rounded-xl px-4 py-3 text-sm text-white outline-none focus:border-violet-400/50 focus:bg-white/10 transition [color-scheme:dark]">
+									</div>
+									<div>
+										<label class="block text-[10px] font-bold text-blue-300 uppercase tracking-widest mb-2">
+											Tanggal Selesai <span class="text-red-400">*</span>
+										</label>
+										<input id="izin-tgl-selesai" type="date"
+											class="w-full bg-white/5 border border-white/15 rounded-xl px-4 py-3 text-sm text-white outline-none focus:border-violet-400/50 focus:bg-white/10 transition [color-scheme:dark]">
+									</div>
+								</div>
+
+								<!-- Keterangan -->
+								<div>
+									<label class="block text-[10px] font-bold text-blue-300 uppercase tracking-widest mb-2">
+										Keterangan <span class="text-red-400">*</span>
+									</label>
+									<textarea id="izin-keterangan" rows="3" maxlength="300"
+										placeholder="Jelaskan alasan izinmu secara singkat..."
+										class="w-full bg-white/5 border border-white/15 rounded-xl px-4 py-3 text-sm text-white placeholder-white/30 outline-none focus:border-violet-400/50 focus:bg-white/10 transition resize-none"></textarea>
+									<p class="text-white/30 text-[10px] mt-1 text-right" id="izin-ket-counter">0/300</p>
+								</div>
+
+								<!-- Upload Surat (muncul jika Sakit) -->
+								<div id="izin-upload-wrap" class="hidden">
+									<label class="block text-[10px] font-bold text-blue-300 uppercase tracking-widest mb-2">
+										Surat Keterangan Sakit
+										<span class="text-white/30 normal-case font-normal">(opsional, maks. 200 KB)</span>
+									</label>
+									<input id="izin-surat-input" type="file" accept="image/*,application/pdf" class="hidden"
+										onchange="handleUploadSuratIzin(this)">
+									<button onclick="document.getElementById('izin-surat-input').click()"
+										id="izin-surat-btn"
+										class="w-full bg-white/5 border-2 border-dashed border-white/20 rounded-xl px-4 py-5 text-sm text-white/40 hover:border-violet-400/50 hover:text-white/60 hover:bg-white/10 transition flex flex-col items-center gap-2">
+										<i class="ph-fill ph-upload-simple text-2xl"></i>
+										<span class="text-xs">Klik untuk unggah surat (PNG/JPG/PDF)</span>
+									</button>
+									<!-- Preview -->
+									<div id="izin-surat-preview" class="hidden mt-3 relative">
+										<div class="flex items-center gap-3 bg-violet-500/20 border border-violet-500/30 rounded-xl px-4 py-3">
+											<i class="ph-fill ph-file-check text-violet-400 text-2xl shrink-0"></i>
+											<div class="flex-1 min-w-0">
+												<p id="izin-surat-nama" class="text-white text-xs font-bold truncate">-</p>
+												<p class="text-violet-300/60 text-[10px]">File berhasil diunggah</p>
+											</div>
+											<button onclick="hapusSuratIzin()"
+												class="w-7 h-7 bg-red-500/20 text-red-400 rounded-lg flex items-center justify-center hover:bg-red-500 hover:text-white transition shrink-0">
+												<i class="ph-bold ph-x text-xs"></i>
+											</button>
+										</div>
+									</div>
+									<input type="hidden" id="izin-surat-url" value="">
+								</div>
+
+								<!-- Tombol Kirim -->
+								<button onclick="kirimPengajuanIzin()"
+									class="w-full bg-gradient-to-r from-violet-600 to-purple-600 text-white font-extrabold py-4 rounded-xl shadow-lg hover:opacity-90 hover:-translate-y-0.5 transition flex items-center justify-center gap-2">
+									<i class="ph-bold ph-paper-plane-tilt"></i> Kirim Pengajuan Izin
+								</button>
+
+							</div>
+						</div>
+
+						<!-- RIWAYAT IZIN -->
+						<div class="bg-white/10 backdrop-blur border border-white/15 rounded-[2rem] p-6">
+							<div class="flex items-center justify-between mb-5">
+								<h4 class="font-extrabold text-white text-sm flex items-center gap-2">
+									<i class="ph-fill ph-clock-countdown text-amber-400"></i> Riwayat Izinku
+								</h4>
+								<button onclick="muatRiwayatIzin()"
+									class="flex items-center gap-1.5 bg-white/10 hover:bg-white/20 text-white/70 hover:text-white px-3 py-1.5 rounded-full text-[10px] font-bold transition">
+									<i class="ph-bold ph-arrows-clockwise"></i> Refresh
+								</button>
+							</div>
+
+							<!-- Filter -->
+							<div class="flex gap-2 mb-4 flex-wrap">
+								<button onclick="filterIzinPengguna('Semua', this)"
+									class="izin-filter-btn px-4 py-1.5 rounded-full text-[10px] font-bold border transition bg-amber-500 text-blue-900 border-amber-500">
+									Semua
+								</button>
+								<button onclick="filterIzinPengguna('Masuk', this)"
+									class="izin-filter-btn px-4 py-1.5 rounded-full text-[10px] font-bold border transition bg-white/5 text-white/60 border-white/15 hover:border-amber-400/50 hover:text-white">
+									Menunggu
+								</button>
+								<button onclick="filterIzinPengguna('Disetujui', this)"
+									class="izin-filter-btn px-4 py-1.5 rounded-full text-[10px] font-bold border transition bg-white/5 text-white/60 border-white/15 hover:border-amber-400/50 hover:text-white">
+									Disetujui
+								</button>
+								<button onclick="filterIzinPengguna('Ditolak', this)"
+									class="izin-filter-btn px-4 py-1.5 rounded-full text-[10px] font-bold border transition bg-white/5 text-white/60 border-white/15 hover:border-amber-400/50 hover:text-white">
+									Ditolak
+								</button>
+							</div>
+
+							<div id="izin-pengguna-list" class="space-y-3">
+								<p class="text-blue-300/60 text-sm text-center py-6 italic">Memuat riwayat...</p>
+							</div>
+							<div id="izin-pengguna-paginasi" class="mt-4"></div>
+						</div>
+
+					</div>
+				</div>
+
+			</div>
+			
+			<div id="page-pengumuman" class="public-page hidden py-10 px-4 max-w-3xl mx-auto">
+				<div class="mb-10">
+					<div class="flex items-center gap-2 mb-2">
+						<div class="w-1 h-5 rounded-full bg-amber-500"></div>
+						<div class="w-6 h-1 rounded-full bg-blue-400"></div>
+						<p class="text-[11px] font-bold text-blue-500 uppercase tracking-[0.2em] ml-1">Info Terkini</p>
+					</div>
+					<h3 class="text-3xl md:text-4xl font-extrabold text-slate-900 leading-tight">Pengumuman</h3>
+					<p class="text-slate-500 text-sm mt-2 font-medium">Informasi resmi dan terkini dari ruang Bimbingan & Konseling.</p>
+				</div>
+				<div id="pengumuman-container" class="relative"></div>
+			</div>
+
+            <div id="page-portal" class="public-page hidden portal-page-wrap">
+				<div class="max-w-7xl mx-auto px-4 py-12">
+
+					<!-- Header section -->
+					<div class="mb-10 flex flex-col md:flex-row md:items-end justify-between gap-4">
+						<div>
+							<div class="flex items-center gap-2 mb-2">
+								<div class="w-1 h-5 rounded-full bg-amber-500"></div>
+								<div class="w-6 h-1 rounded-full bg-indigo-400"></div>
+								<p class="text-[11px] font-bold text-indigo-500 uppercase tracking-[0.2em] ml-1">Layanan BK</p>
+							</div>
+							<h3 class="text-3xl md:text-4xl font-extrabold leading-tight"
+								style="background: linear-gradient(135deg, #1e3a8a, #4f46e5, #7c3aed); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+								Layanan Portal
+							</h3>
+							<p class="text-slate-500 text-sm mt-2 font-medium">Akses berbagai layanan sistem Bimbingan dan Konseling.</p>
+						</div>
+						<!-- Dekorasi pojok kanan -->
+						<div class="flex items-center gap-2 shrink-0">
+							<div class="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></div>
+							<span class="text-xs font-bold text-slate-400 uppercase tracking-widest">Semua Layanan Aktif</span>
+							<div class="w-2 h-2 rounded-full bg-indigo-400 animate-pulse"></div>
+						</div>
+					</div>
+
+					<!-- Grid kartu -->
+					<div id="portal-container" class="grid grid-cols-2 md:grid-cols-4 gap-5"></div>
+
+					<!-- Dekorasi bawah -->
+					<div class="mt-12 flex items-center justify-center gap-3">
+						<div class="h-px flex-1 max-w-xs" style="background: linear-gradient(90deg, transparent, rgba(99,102,241,0.2), transparent);"></div>
+						<div class="flex gap-1.5">
+							<div class="w-1.5 h-1.5 rounded-full bg-amber-400"></div>
+							<div class="w-1.5 h-1.5 rounded-full bg-indigo-400"></div>
+							<div class="w-1.5 h-1.5 rounded-full bg-violet-400"></div>
+						</div>
+						<div class="h-px flex-1 max-w-xs" style="background: linear-gradient(90deg, transparent, rgba(99,102,241,0.2), transparent);"></div>
+					</div>
+				</div>
+			</div>
+
+            <div id="page-video" class="public-page hidden py-10 px-4 max-w-7xl mx-auto">
+                <div class="mb-8">
+                    <h3 class="text-2xl font-extrabold text-slate-900 mb-2 border-l-4 border-red-500 pl-4">Galeri Video</h3>
+                    <p class="text-slate-500 text-sm ml-5">Kumpulan tayangan edukasi dan bimbingan.</p>
+                </div>
+                <div id="video-container" class="grid grid-cols-1 md:grid-cols-3 gap-6"></div>
+            </div>
+
+            <div id="page-berita" class="public-page hidden py-10 px-4 max-w-7xl mx-auto">
+                <div class="mb-8">
+                    <h3 class="text-2xl font-extrabold text-slate-900 mb-2 border-l-4 border-blue-500 pl-4">Kabar & Informasi</h3>
+                    <p class="text-slate-500 text-sm ml-5">Informasi terbaru seputar kegiatan dan layanan BK.</p>
+                </div>
+                <div id="berita-container" class="grid grid-cols-1 md:grid-cols-3 gap-6"></div>
+            </div>
+
+            <div id="page-karya" class="public-page hidden py-10 px-4 max-w-7xl mx-auto">
+                <div class="mb-8">
+                    <h3 class="text-2xl font-extrabold text-slate-900 mb-2 border-l-4 border-purple-500 pl-4">Karya Siswa</h3>
+                    <p class="text-slate-500 text-sm ml-5">Apresiasi hasil kreativitas dan bakat siswa.</p>
+                </div>
+                <div id="karya-container" class="grid grid-cols-2 md:grid-cols-4 gap-6"></div>
+            </div>
+
+            <div id="page-galeri" class="public-page hidden py-10 px-4 max-w-7xl mx-auto">
+                <div class="mb-8">
+                    <h3 class="text-2xl font-extrabold text-slate-900 mb-2 border-l-4 border-pink-500 pl-4">Dokumentasi Kegiatan</h3>
+                    <p class="text-slate-500 text-sm ml-5">Jejak visual aktivitas Bimbingan Konseling.</p>
+                </div>
+                <div id="galeri-container" class="columns-2 md:columns-4 gap-4 space-y-4"></div>
+            </div>
+
+            <div id="page-qna" class="public-page hidden py-10 px-4 max-w-3xl mx-auto">
+                <div class="mb-8">
+                    <h3 class="text-2xl font-extrabold text-slate-900 mb-2 border-l-4 border-emerald-500 pl-4">Tanya Jawab (QnA)</h3>
+                    <p class="text-slate-500 text-sm ml-5">Pertanyaan yang sering diajukan seputar layanan kami.</p>
+                </div>
+                <div id="qna-container" class="space-y-4"></div>
+            </div>
+
+           <div id="page-testimoni" class="public-page hidden py-10 px-4 max-w-7xl mx-auto">
+				<div class="mb-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+					<div>
+						<h3 class="text-2xl font-extrabold text-slate-900 mb-2 border-l-4 border-amber-600 pl-4">Suara Mereka</h3>
+						<p class="text-slate-500 text-sm ml-5">Apa kata warga sekolah mengenai layanan SOBAT BK?</p>
+					</div>
+					<button onclick="formTambahTestimoni()"
+						class="shrink-0 flex items-center gap-2 bg-gradient-to-r from-amber-500 to-amber-400 text-blue-900 font-extrabold px-6 py-3 rounded-full shadow-lg shadow-amber-500/20 hover:shadow-amber-500/40 hover:-translate-y-0.5 transition text-sm">
+						<i class="ph-bold ph-pencil-line"></i> Tulis Testimoni
+					</button>
+				</div>
+				<div id="testimoni-container" class="columns-1 md:columns-3 gap-6 space-y-6"></div>
+			</div>
+
+            <div id="page-detail" class="public-page hidden py-10 px-4 max-w-4xl mx-auto">
+                <button onclick="navigasiPublic(kembaliKePage, null)" class="mb-6 flex items-center gap-2 text-sm font-bold text-slate-500 hover:text-blue-600 transition bg-white px-4 py-2 rounded-full shadow-sm w-max border border-slate-200">
+                    <i class="ph-bold ph-arrow-left"></i> Kembali ke Daftar
+                </button>
+                <div class="bg-white p-6 md:p-10 rounded-[2rem] shadow-sm border border-slate-100">
+                    <div class="w-full h-64 md:h-96 rounded-2xl overflow-hidden mb-8 shadow-sm">
+                        <img id="detail-gambar" src="" class="w-full h-full object-cover">
+                    </div>
+                    <h2 id="detail-judul" class="text-3xl md:text-4xl font-extrabold text-slate-900 mb-4 leading-tight">Judul</h2>
+                    <div id="detail-meta" class="flex items-center gap-4 text-xs font-bold text-slate-400 mb-8 pb-6 border-b border-slate-200"></div>
+                    <div id="detail-isi" class="text-slate-700 leading-relaxed text-justify whitespace-pre-line text-lg"></div>
+                </div>
+            </div>
+
+        </main>
+        
+        <footer class="bg-[#0F172A] text-slate-400 py-10 text-center border-t-4 border-amber-500 mt-auto shrink-0">
+			<div class="max-w-2xl mx-auto px-4">
+				<div class="flex items-center justify-center gap-3 mb-4">
+					<div class="w-10 h-10 rounded-xl overflow-hidden border border-amber-500/30">
+						<img src="https://drive.google.com/thumbnail?id=1YstR2gBLBWMOSxuPwiQR0XYEa-qjkOOl"
+							class="w-full h-full object-cover"
+							onerror="this.style.display='none'">
+					</div>
+					<div class="text-left">
+						<p class="text-white font-extrabold text-sm tracking-wide">Project SOBAT BK</p>
+						<p class="text-amber-500 text-[10px] font-bold uppercase tracking-widest">MADRASAH ALIYAH NEGERI 4 BONE</p>
+					</div>
+				</div>
+				<div class="w-16 h-px bg-amber-500/30 mx-auto mb-4"></div>
+				<p class="text-slate-500 text-xs font-bold tracking-wider mb-1">
+					Mappaguru Online — <span class="text-amber-500">Muhammad Hasratul</span>
+				</p>
+				<p class="text-slate-600 text-[10px] tracking-widest uppercase">
+					© 2026 Hak Cipta Dilindungi Undang-Undang
+				</p>
+			</div>
+		</footer>
+    </div>
+
+    <div id="dashboard-view" class="hidden flex-1 flex flex-col md:flex-row bg-slate-50 h-screen overflow-hidden relative">
+        
+        <div id="mobile-sidebar-overlay" onclick="toggleSidebar()" class="fixed inset-0 bg-slate-900/60 z-40 hidden md:hidden backdrop-blur-sm"></div>
+
+        <aside id="sidebar" class="fixed md:relative z-50 w-64 h-full glass-dark text-slate-300 flex flex-col shadow-2xl transition-transform duration-300 transform -translate-x-full md:translate-x-0">
+            <div class="h-20 flex items-center justify-between px-6 border-b border-slate-700/50">
+                <div class="flex items-center gap-3">
+                    <i class="ph-fill ph-shield-check text-amber-500 text-3xl"></i>
+                    <span class="font-bold text-white text-lg tracking-wide">SOBAT BK</span>
+                </div>
+                <button onclick="toggleSidebar()" class="md:hidden text-slate-400 hover:text-white"><i class="ph-bold ph-x text-xl"></i></button>
+            </div>
+            <nav class="flex-1 overflow-y-auto py-4 px-3 space-y-1 hide-scroll" id="sidebar-menu"></nav>
+            <div class="p-4 border-t border-slate-700/50">
+                <button onclick="logout()" class="w-full flex items-center justify-center gap-2 bg-red-500/10 text-red-400 hover:bg-red-500 hover:text-white py-3 rounded-xl transition font-bold text-sm">
+                    <i class="ph-bold ph-sign-out"></i> Akhiri Sesi
+                </button>
+            </div>
+        </aside>
+
+        <main class="flex-1 flex flex-col h-full overflow-hidden relative z-10">
+           <!-- HEADER DASHBOARD MEWAH -->
+			<header class="h-auto min-h-[5rem] py-3 glass flex items-center justify-between px-4 md:px-8 border-b border-slate-200/50 shadow-[0_4px_30px_rgba(0,0,0,0.03)] z-20 shrink-0 relative overflow-hidden">
+				<!-- Efek Cahaya Latar Belakang (Ambient Glow) -->
+				<div class="absolute top-0 right-1/4 w-64 h-64 bg-amber-400/10 rounded-full blur-3xl pointer-events-none -translate-y-1/2"></div>
+				<div class="absolute bottom-0 left-1/4 w-64 h-64 bg-blue-600/5 rounded-full blur-3xl pointer-events-none translate-y-1/2"></div>
+
+				<div class="flex items-center gap-4 relative z-10">
+					<button onclick="toggleSidebar()" id="btn-mobile-sidebar" class="md:hidden text-slate-600 hover:text-blue-900 bg-white/50 border border-slate-200 p-2 rounded-xl hidden shadow-sm"><i class="ph-bold ph-list text-xl"></i></button>
+					<div class="flex flex-col">
+						<h2 id="dashboard-title" class="text-xl md:text-[1.75rem] font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-950 via-blue-800 to-blue-600 leading-tight tracking-tight drop-shadow-sm">Dashboard</h2>
+						<p class="text-[10px] font-extrabold text-amber-500 uppercase tracking-[0.2em] mt-1 flex items-center gap-1.5" id="sheet-subtitle">
+							<span class="w-1.5 h-1.5 rounded-full bg-amber-500 animate-pulse shadow-[0_0_8px_rgba(245,158,11,0.8)]"></span> Manajemen Data
+						</p>
+					</div>
+				</div>
+				
+				<!-- PANEL KANAN: Profil & Tombol Keluar Premium -->
+				<div class="flex items-center gap-3 relative z-10">
+					
+					<!-- Chip Profil Mewah (Sudah Bisa Diklik) -->
+					<div onclick="loadTableData('Guru')" class="flex items-center gap-3 bg-gradient-to-r from-slate-50 to-white pl-1.5 pr-4 py-1.5 rounded-[2rem] shadow-sm border border-slate-200/80 hover:shadow-md hover:border-blue-300 transition duration-300 cursor-pointer group" title="Lihat Profil Anda">
+						<div class="w-9 h-9 rounded-full bg-gradient-to-tr from-amber-500 via-yellow-400 to-orange-500 p-[2px] shadow-sm group-hover:rotate-6 transition duration-300 shrink-0">
+							<img id="header-avatar" src="" onerror="this.src='https://ui-avatars.com/api/?name=Admin&background=1e3a8a&color=fff'" class="w-full h-full rounded-full object-cover border-[1.5px] border-white bg-slate-100">
+						</div>
+						<div class="hidden md:flex flex-col justify-center">
+							<span id="user-display" class="font-extrabold text-slate-800 text-xs leading-tight group-hover:text-blue-700 transition">Admin BK</span>
+							<span class="text-[8px] font-extrabold text-slate-400 tracking-widest">GURU BK</span>
+						</div>
+					</div>
+
+					<!-- Tombol Keluar Bercahaya -->
+					<button onclick="logout()" class="group relative px-4 py-2.5 bg-gradient-to-r from-rose-500 to-red-600 text-white rounded-[1.25rem] font-extrabold text-xs shadow-lg shadow-red-500/30 hover:shadow-red-500/50 hover:-translate-y-0.5 transition-all duration-300 flex items-center gap-2 overflow-hidden border border-red-400/50" title="Akhiri Sesi">
+						<div class="absolute inset-0 bg-white/20 -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out skew-x-12"></div>
+						<i class="ph-bold ph-power text-base group-hover:rotate-90 transition-transform duration-500 relative z-10"></i>
+						<span class="hidden md:inline relative z-10">Keluar</span>
+					</button>
+
+				</div>
+			</header>
+			<!-- HEADER DASHBOARD MEWAH END -->
+
+            <div class="flex-1 overflow-auto p-4 md:p-8 relative">
+                <div class="glass-card bg-white rounded-3xl p-4 md:p-6 shadow-sm border border-slate-100 flex flex-col h-full">
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-6">
+                        <h3 class="text-xl font-extrabold text-slate-800 flex items-center gap-2">
+                            <i class="ph-fill ph-database text-blue-600"></i> Data <span id="table-name-display" class="text-amber-600">Terpilih</span>
+                        </h3>
+                        <button onclick="showFormModal('create')" class="w-full md:w-auto bg-blue-900 text-white px-6 py-2.5 rounded-xl text-sm font-bold shadow-lg shadow-blue-900/20 hover:bg-blue-800 hover:-translate-y-0.5 transition flex items-center justify-center gap-2">
+                            <i class="ph-bold ph-plus"></i> Tambah Data Baru
+                        </button>
+                    </div>
+                    
+                    <div id="dynamic-content-wrapper" class="flex-1 overflow-x-auto overflow-y-auto hide-scroll rounded-2xl border border-slate-100 bg-slate-50 p-2 md:p-4 relative">
+                        <div class="p-8 text-center text-slate-400 font-medium w-full flex flex-col items-center justify-center h-full">
+                            <div class="w-8 h-8 border-4 border-blue-600 border-t-transparent rounded-full animate-spin mb-2"></div>
+                            Menyiapkan tabel...
+                        </div>
+                    </div>
+                </div>
+            </div>
+			
+			<!-- FOOTER GURU START -->
+                <footer class="bg-white border-t border-slate-200 py-3 px-6 shrink-0 z-20 flex flex-col md:flex-row items-center justify-between gap-2 text-center md:text-left">
+                    <div class="flex items-center gap-2">
+                        <div class="w-5 h-5 rounded-md bg-amber-500 flex items-center justify-center text-white"><i class="ph-fill ph-shield-check text-[10px]"></i></div>
+                        <p class="text-[10px] font-extrabold text-slate-600 uppercase tracking-widest">SOBAT BK © 2026</p>
+                    </div>
+                    <p class="text-[9px] text-slate-400 font-bold tracking-wider uppercase">MADRASAH ALIYAH NEGERI 4 BONE | Mappaguru Online</p>
+                </footer>
+                <!-- FOOTER GURU END -->
+			
+        </main>
+    </div>
+
+    <div id="iframe-modal" class="fixed inset-0 bg-slate-900/90 z-[100] hidden flex flex-col backdrop-blur-md transition-opacity duration-300 opacity-0">
+        <div class="h-16 flex justify-between items-center px-6 border-b border-slate-700 bg-slate-900">
+            <h3 id="iframe-title" class="text-white font-bold text-lg">Membuka Aplikasi...</h3>
+            <button onclick="closeIframe()" class="w-8 h-8 bg-white/10 hover:bg-red-500 rounded-full text-white flex items-center justify-center transition"><i class="ph-bold ph-x"></i></button>
+        </div>
+        <div class="flex-1 w-full bg-white relative">
+            <div id="iframe-loader" class="absolute inset-0 flex flex-col items-center justify-center bg-slate-50 z-10">
+                <div class="w-12 h-12 border-4 border-blue-600 border-t-transparent rounded-full animate-spin mb-4"></div>
+                <p class="text-xs font-bold text-slate-400 uppercase tracking-widest animate-pulse">Menghubungkan ke Server...</p>
+            </div>
+            <iframe id="app-iframe" class="w-full h-full border-none relative z-20" onload="document.getElementById('iframe-loader').classList.add('hidden')"></iframe>
+        </div>
+    </div>
+
+    <div id="crud-modal-overlay" class="fixed inset-0 bg-slate-900/70 z-[90] hidden items-center justify-center p-4 backdrop-blur-sm transition-opacity duration-300 opacity-0">
+        <div class="glass-card bg-white rounded-[2rem] max-w-2xl w-full max-h-[90vh] flex flex-col shadow-2xl transform transition-transform duration-300 scale-95" id="crud-modal-content">
+            <div class="flex justify-between items-center p-6 border-b border-slate-100 shrink-0">
+                <h3 id="crud-modal-title" class="text-xl font-extrabold text-slate-800">Form</h3>
+                <button onclick="closeCrudModal()" class="w-8 h-8 bg-slate-100 hover:bg-red-100 text-slate-500 hover:text-red-500 rounded-full flex items-center justify-center transition"><i class="ph-bold ph-x"></i></button>
+            </div>
+            <div id="crud-modal-body" class="p-6 overflow-y-auto flex-1 space-y-4 hide-scroll bg-slate-50/50"></div>
+            <div class="p-6 border-t border-slate-100 bg-white shrink-0 flex gap-3 rounded-b-[2rem]" id="crud-modal-footer">
+                <button onclick="closeCrudModal()" class="flex-1 bg-slate-100 text-slate-600 py-3 rounded-xl font-bold hover:bg-slate-200 transition">Batal</button>
+                <button id="btn-save-crud" class="flex-1 bg-blue-600 text-white py-3 rounded-xl font-bold hover:bg-blue-700 transition shadow-lg shadow-blue-600/30">Simpan Data</button>
+            </div>
+        </div>
+    </div>
+	
+	<!-- POPUP CHAT MOBILE GURU - dibuat sekali, konten diupdate -->
+	<div id="guru-chat-popup-mobile" class="hidden fixed inset-0 z-[200] flex flex-col bg-gradient-to-br from-blue-950 via-blue-900 to-blue-800"></div>
+	<script src="script.obfuscated.js"></script>
+
+    
+</body>
+</html>
